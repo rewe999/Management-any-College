@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+{{--                    {{ __('You are logged in!') }}--}}
+                    {{ \Illuminate\Support\Facades\Session::get('registered') }}
                 </div>
             </div>
         </div>
