@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.layout')
+@section('title','Pracownicy Uczelni')
 @section('content')
     <section id="team" class="pb-5">
         <div class="container">
@@ -13,7 +14,7 @@
                                     <div class="card">
                                         <div class="card-body text-center">
                                             <p><img class="img-fluid"
-                                                    src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
+                                                    src="{{asset('assets/foto.jpg')}}"
                                                     alt="card image"></p>
                                             <h4 class="card-title">{{$people->title}} {{$people->name }} {{ $people->surname }}</h4>
                                             <p class="card-text">{{$people->section}}</p>
@@ -23,14 +24,15 @@
                                 <div class="backside">
                                     <div class="card">
                                         <div class="card-body text-center mt-4">
-                                            <h4 class="card-title">Specjalności</h4>
+                                            <h4 class="card-title">Witam!</h4>
+                                            <p>Nazywam się {{$people->name }} {{ $people->surname }} mam 42 lata i moje zainteresowania to:</p>
                                             @foreach($people->didactic as $did)
-                                                <p class="card-text">
-                                                    {{$did->data}}
-                                                </p>
+                                                <ul class="card-text">
+                                                    <li> {{$did->data}} </li>
+                                                </ul>
                                             @endforeach
                                         </div>
-                                        <button type="button" class="btn btn-outline-info"><a href=" {{route('peoples.show',$people->id)}}"> Zobacz Pracownika </a></button>
+                                        <button type="button" class="btn btn-outline-info"><a href=" {{route('peoples.show',$people->id)}}"> Zobacz więcej o mnie </a></button>
                                     </div>
                                 </div>
                             </div>
@@ -45,9 +47,9 @@
 @endsection
 
 <style>
-    #team {
-        background: #eee !important;
-    }
+    /*#team {*/
+    /*    background: #eee !important;*/
+    /*}*/
 
     section {
         padding: 60px 0;
@@ -125,5 +127,9 @@
         width: 120px;
         height: 120px;
         border-radius: 50%;
+    }
+
+    ul > li {
+        text-align: left;
     }
 </style>

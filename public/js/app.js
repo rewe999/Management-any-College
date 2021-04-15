@@ -37345,6 +37345,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37410,8 +37412,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! G:\laravel\PD\PD\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! G:\laravel\PD\PD\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\Programowanie\Laravel\PD-pwsz\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\Programowanie\Laravel\PD-pwsz\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
