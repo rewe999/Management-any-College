@@ -5,7 +5,7 @@ namespace App\Models;
 use App\People;
 use Illuminate\Database\Eloquent\Model;
 
-class Didactic extends Model
+class Scientific extends Model
 {
     public $timestamps=false;
 

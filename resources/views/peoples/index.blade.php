@@ -14,7 +14,7 @@
                                     <div class="card">
                                         <div class="card-body text-center">
                                             <p><img class="img-fluid"
-                                                    src="{{asset('assets/foto.jpg')}}"
+                                                    src="https://picsum.photos/{{$people->id}}/354"
                                                     alt="card image"></p>
                                             <h4 class="card-title">{{$people->title}} {{$people->name }} {{ $people->surname }}</h4>
                                             <p class="card-text">{{$people->section}}</p>
@@ -25,7 +25,7 @@
                                     <div class="card">
                                         <div class="card-body text-center mt-4">
                                             <h4 class="card-title">Witam!</h4>
-                                            <p>Nazywam się {{$people->name }} {{ $people->surname }} mam 42 lata i moje zainteresowania to:</p>
+                                            <p>Nazywam się {{$people->name }} {{ $people->surname }} mam {{ $people->birth_date }} lata i moje zainteresowania to:</p>
                                             @foreach($people->didactic as $did)
                                                 <ul class="card-text">
                                                     <li> {{$did->data}} </li>
@@ -41,6 +41,12 @@
                     <!-- ./Team member -->
                 @endforeach
 
+                <div class="container">
+                    <div class="row">
+                        <div class="m-auto">{{ $peoples->links() }}</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -50,6 +56,12 @@
     /*#team {*/
     /*    background: #eee !important;*/
     /*}*/
+
+    #team{
+        background-image: url("{{asset('assets/pwsz-photo.jpg')}}");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     section {
         padding: 60px 0;

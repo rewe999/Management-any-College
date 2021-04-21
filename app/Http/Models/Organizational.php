@@ -2,10 +2,9 @@
 
 namespace App\Models;
 
-use App\People;
 use Illuminate\Database\Eloquent\Model;
 
-class Didactic extends Model
+class Organizational extends Model
 {
     public $timestamps=false;
 

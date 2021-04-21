@@ -14,7 +14,7 @@ class PeopleController extends Controller
      */
     public function index()
     {
-        $peoples = People::with('didactic')->get();
+        $peoples = People::with('didactic')->paginate(5);
 //        dd($peoples);
         return view('peoples.index', ['peoples' => $peoples]);
     }

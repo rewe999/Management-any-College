@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Didactic;
 use Illuminate\Database\Eloquent\Model;
 
 class People extends Model
