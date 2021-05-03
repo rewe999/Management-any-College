@@ -17,6 +17,9 @@ Route::get('/', function () {
     return redirect('peoples');
 });
 
+Route::get('aktualnosci', 'NewsController@index')->name('news');
+Route::get('druki', 'FormController@index')->name('print');
+
 //Auth::routes();
 
 // Authentication Routes...

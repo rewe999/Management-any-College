@@ -9,7 +9,7 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#">STUDIA</a>
+                    <a class="nav-link dropdown-toggle" href="#">STUDIA</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
                         <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
@@ -18,15 +18,15 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#">INSTYTUT</a>
+                    <a class="nav-link dropdown-toggle" href="#">INSTYTUT</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-                        <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                        <li><a class="dropdown-item" href="{{route('peoples.index')}}"> Pracownicy uczelni</a></li>
+                        <li><a class="dropdown-item" href="{{route('print')}}"> Druki </a></li>
                         <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
                     </ul>
                 </li>
 
-                <li class="nav-item dropdown"> <a class="nav-link active" href="#">AKTUALNOŚCI</a> </li>
+                <li class="nav-item dropdown"> <a class="nav-link active" href="{{route('news')}}">AKTUALNOŚCI</a> </li>
 
                 @auth
                     <li class="nav-item dropdown">
@@ -84,4 +84,5 @@
     .navbar-brand {
         padding-left: 5rem;
     }
+
 </style>

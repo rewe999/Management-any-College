@@ -14,7 +14,7 @@
                                     <div class="card">
                                         <div class="card-body text-center">
                                             <p><img class="img-fluid"
-                                                    src="https://picsum.photos/{{$people->id}}/354"
+                                                    src="https://picsum.photos/200/300?random={{$people->id}}"
                                                     alt="card image"></p>
                                             <h4 class="card-title">{{$people->title}} {{$people->name }} {{ $people->surname }}</h4>
                                             <p class="card-text">{{$people->section}}</p>
@@ -25,7 +25,7 @@
                                     <div class="card">
                                         <div class="card-body text-center mt-4">
                                             <h4 class="card-title">Witam!</h4>
-                                            <p>Nazywam się {{$people->name }} {{ $people->surname }} mam {{ $people->birth_date }} lata i moje zainteresowania to:</p>
+                                            <p>Nazywam się {{$people->name }} {{ $people->surname }} mam {{ 2021 - substr($people->birth_date, 0, 4) }} lat/a i moje zainteresowania to:</p>
                                             @foreach($people->didactic as $did)
                                                 <ul class="card-text">
                                                     <li> {{$did->data}} </li>
