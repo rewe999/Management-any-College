@@ -16,20 +16,21 @@
                 <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>Testowy tytuł</td>
+                    <td>Testowy opis</td>
+                    <td><a href="#">Testowy załącznik</a> </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <td>Testowy tytuł2</td>
+                    <td>Testowy opis2</td>
+                    <td><a href="#">Testowy załącznik2</a> </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                    <td>Testowy tytuł3</td>
+                    <td>Testowy opis3</td>
+                    <td><a href="#">Testowy załącznik3</a> </td>
                 </tr>
                 </tbody>
             </table>

@@ -14,7 +14,7 @@ class PeopleController extends Controller
      */
     public function index()
     {
-        $peoples = People::with('didactic')->paginate(5);
+        $peoples = People::orderBy('name')->with('didactic')->paginate(6);
 //        dd($peoples);
         return view('peoples.index', ['peoples' => $peoples]);
     }
@@ -26,7 +26,7 @@ class PeopleController extends Controller
      */
     public function create()
     {
-        //
+        return view('peoples.create');
     }
 
     /**
@@ -37,7 +37,23 @@ class PeopleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $person = new People();
+        $person->title = $request['title'];
+        $person->name = $request['name'];
+        $person->surname = $request['surname'];
+        $person->section = $request['section'];
+        $person->position = $request['position'];
+        $person->sex = $request['gender'];
+        $person->birth_date = $request['date'];
+        if ($request->hasFile('avatar')){
+            $path = $request['avatar']->store('avatars','public');
+            $person->avatar = $path;
+        }
+        $person->email = $request['email'];
+        $person->url = $request['url'];
+        $person->save();
+
+        return redirect('pracownicy');
     }
 
     /**
@@ -46,7 +62,7 @@ class PeopleController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(int $id)
+    public function show($id)
     {
         $person = People::findOrFail($id)->with('didactic')->get();
         return view('peoples.show', ['person' => $person]);

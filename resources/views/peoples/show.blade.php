@@ -26,7 +26,8 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
-                                    <img class="img-fluid" src="{{asset('assets/foto.jpg')}}" alt="">
+{{--                                    <img class="img-fluid" src="{{asset('assets/foto.jpg')}}" alt="">--}}
+                                    <img class="img-fluid" src="https://picsum.photos/200/300?random=2" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 desc">

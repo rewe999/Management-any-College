@@ -13,7 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                    <a href="{{route('news.add')}}">Dodaj druk</a> <br />
+                    <a href="{{route('people.add')}}">Dodaj pracownika</a> <br />
+                    <a href="{{route('news.add')}}">Dodaj aktualności</a>
 {{--                    {{ __('You are logged in!') }}--}}
                     {{ \Illuminate\Support\Facades\Session::get('registered') }}
                 </div>

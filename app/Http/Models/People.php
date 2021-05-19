@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class People extends Model
 {
+    public $timestamps=false;
+
     protected $fillable = [
-        'title','name', 'surname', 'section','avatar'
+        'title','name', 'surname', 'section','avatar','position','sex','birth_date','avatar','active','email','url'
     ];
 
     public function didactic()

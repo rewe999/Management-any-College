@@ -17,6 +17,16 @@ Route::get('/', function () {
     return redirect('peoples');
 });
 
+Route::middleware(['auth'])->group(function (){
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::get('druki/dodaj', 'FormController@create')->name('news.add');
+    Route::post('druki/dodaj', 'FormController@store')->name('news.store');
+
+    Route::get('pracownicy/dodaj', 'PeopleController@create')->name('people.add');
+    Route::post('pracownicy/dodaj', 'PeopleController@store')->name('people.store');
+});
+
 Route::get('aktualnosci', 'NewsController@index')->name('news');
 Route::get('druki', 'FormController@index')->name('print');
 
@@ -39,11 +49,8 @@ Route::group(['prefix'=>'admin'], function(){
     Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 });
 
-Route::group(['prefix'=>'peoples'], function(){
+Route::group(['prefix'=>'pracownicy'], function(){
     Route::get('', 'PeopleController@index')->name('peoples.index');
     Route::get('/{id}', 'PeopleController@show')->name('peoples.show');
 });
 
-
-
-Route::get('/home', 'HomeController@index')->name('home');

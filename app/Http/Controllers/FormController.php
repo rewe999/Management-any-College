@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Form;
+use App\Http\Models\FormsAttachment;
+use App\Http\Requests\FormsRequest;
 use Illuminate\Http\Request;
 
 class FormController extends Controller
@@ -23,7 +26,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        //
+        return view('prints.create');
     }
 
     /**
@@ -34,7 +37,25 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form = new Form();
+        $form->title = $request->input('title');
+        $form->description = $request->input('desc');
+//        $form->save();
+
+        $attachment = new FormsAttachment();
+//        $attachment->attachment_id = $form->id;
+        $attachment->attachment_id = 5;
+        $path = $request->allFiles('files');
+        foreach($request->file('files') as $file)
+        {
+            $name=$file->getClientOriginalName();
+            $file->move(public_path().'/files/', $name);
+            $data[] = $name;
+        }
+
+        $attachment->file = json_encode($data);
+        $attachment->save();
+
     }
 
     /**
