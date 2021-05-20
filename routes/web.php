@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('peoples');
+    return redirect('pracownicy');
 });
 
 Route::middleware(['auth'])->group(function (){
@@ -24,7 +24,11 @@ Route::middleware(['auth'])->group(function (){
     Route::post('druki/dodaj', 'FormController@store')->name('news.store');
 
     Route::get('pracownicy/dodaj', 'PeopleController@create')->name('people.add');
+    Route::get('pracownicy/edit', 'PeopleController@showPersons')->name('people.edit');
+    Route::get('pracownicy/edit/{id}', 'PeopleController@edit')->name('people.edit.id');
     Route::post('pracownicy/dodaj', 'PeopleController@store')->name('people.store');
+    Route::put('pracownicy/aktualizuj/{id}', 'PeopleController@update')->name('people.update');
+    Route::get('pracownicy/usun/{id}', 'PeopleController@destroy')->name('people.destroy');
 });
 
 Route::get('aktualnosci', 'NewsController@index')->name('news');

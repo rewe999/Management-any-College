@@ -13,6 +13,8 @@ class People extends Model
         'title','name', 'surname', 'section','avatar','position','sex','birth_date','avatar','active','email','url'
     ];
 
+    protected $dates = ['date'];
+
     public function didactic()
     {
         return $this->hasMany(Didactic::class);

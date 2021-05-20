@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Models/FormsAttachment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/peoples/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/prints/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/peoples/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/peoples/showPerson.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Models/Form.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/Form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Models/People.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/People.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/peoples/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/prints/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prints/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +152,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/peoples" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -223,7 +216,9 @@
       <workItem from="1620037594125" duration="5936000" />
       <workItem from="1620207935192" duration="134000" />
       <workItem from="1620581052924" duration="999000" />
-      <workItem from="1621415071536" duration="9226000" />
+      <workItem from="1621415071536" duration="9603000" />
+      <workItem from="1621505696293" duration="72000" />
+      <workItem from="1621505775948" duration="5749000" />
     </task>
     <servers />
   </component>
@@ -241,5 +236,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

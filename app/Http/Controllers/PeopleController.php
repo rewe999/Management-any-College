@@ -68,6 +68,12 @@ class PeopleController extends Controller
         return view('peoples.show', ['person' => $person]);
     }
 
+    public function showPersons()
+    {
+        $persons = People::orderBy('name')->get();
+        return view('peoples.showPerson',['persons' => $persons]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -76,7 +82,8 @@ class PeopleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $person = People::findOrFail($id);
+        return view('peoples.edit',['person' => $person]);
     }
 
     /**
@@ -84,11 +91,27 @@ class PeopleController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,int $id)
     {
-        //
+        $person = People::findOrFail($id);
+        $person->title = $request['title'];
+        $person->name = $request['name'];
+        $person->surname = $request['surname'];
+        $person->section = $request['section'];
+        $person->position = $request['position'];
+        $person->sex = $request['gender'];
+        $person->birth_date = $request['date'];
+        if ($request->hasFile('avatar')){
+            $path = $request['avatar']->store('avatars','public');
+            $person->avatar = $path;
+        }
+        $person->email = $request['email'];
+        $person->url = $request['url'];
+        $person->save();
+
+        return redirect('pracownicy/edit');
     }
 
     /**
@@ -99,6 +122,9 @@ class PeopleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $person = People::findOrFail($id);
+        $person->delete();
+
+        return redirect('pracownicy/edit');
     }
 }
