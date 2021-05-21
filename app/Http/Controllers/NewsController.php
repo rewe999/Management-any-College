@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
@@ -13,7 +15,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        return view('news.index');
+        $news = News::get();
+        return view('news.index',['news' => $news]);
     }
 
     /**
@@ -23,6 +26,13 @@ class NewsController extends Controller
      */
     public function create()
     {
+        return view('news.create');
+    }
+
+    public function showNews()
+    {
+        $news = News::orderBy('date')->get();
+        return view('news.showNews',['news' => $news]);
     }
 
     /**
@@ -33,7 +43,13 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new = new News();
+        $new->title = $request['title'];
+        $new->content = $request['content'];
+        $new->date = Carbon::now();
+        $new->save();
+
+        return redirect('aktualnosci/edit');
     }
 
     /**
@@ -44,7 +60,8 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $new = News::findOrFail($id);
+        return view('news.show',['new'=>$new]);
     }
 
     /**
@@ -55,7 +72,8 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $new = News::findOrFail($id);
+        return view('news.edit',['new'=>$new]);
     }
 
     /**
@@ -67,7 +85,12 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $new = News::findOrFail($id);
+        $new->title = $request['title'];
+        $new->content = $request['content'];
+        $new->save();
+
+        return redirect('aktualnosci/edit');
     }
 
     /**
@@ -78,6 +101,9 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $new = News::findOrFail($id);
+        $new->delete();
+
+        return redirect('aktualnosci/edit');
     }
 }

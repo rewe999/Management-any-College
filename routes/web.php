@@ -20,8 +20,15 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function (){
     Route::get('/home', 'HomeController@index')->name('home');
 
-    Route::get('druki/dodaj', 'FormController@create')->name('news.add');
-    Route::post('druki/dodaj', 'FormController@store')->name('news.store');
+    Route::get('aktualnosci/dodaj', 'NewsController@create')->name('news.add');
+    Route::post('aktualnosci/dodaj', 'NewsController@store')->name('news.store');
+    Route::get('aktualnosci/edit', 'NewsController@showNews')->name('news.edit');
+    Route::get('aktualnosci/edit/{id}', 'NewsController@edit')->name('news.edit.id');
+    Route::put('aktualnosci/aktualizuj/{id}', 'NewsController@update')->name('news.update');
+    Route::get('aktualnosci/usun/{id}', 'NewsController@destroy')->name('news.destroy');
+
+    Route::get('druki/dodaj', 'FormController@create')->name('form.add');
+    Route::post('druki/dodaj', 'FormController@store')->name('form.store');
 
     Route::get('pracownicy/dodaj', 'PeopleController@create')->name('people.add');
     Route::get('pracownicy/edit', 'PeopleController@showPersons')->name('people.edit');
@@ -32,6 +39,7 @@ Route::middleware(['auth'])->group(function (){
 });
 
 Route::get('aktualnosci', 'NewsController@index')->name('news');
+Route::get('aktualnosci/{id}', 'NewsController@show')->name('news.show');
 Route::get('druki', 'FormController@index')->name('print');
 
 //Auth::routes();

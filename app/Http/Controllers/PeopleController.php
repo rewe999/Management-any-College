@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\People;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PeopleController extends Controller
 {
@@ -15,7 +16,6 @@ class PeopleController extends Controller
     public function index()
     {
         $peoples = People::orderBy('name')->with('didactic')->paginate(6);
-//        dd($peoples);
         return view('peoples.index', ['peoples' => $peoples]);
     }
 

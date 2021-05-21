@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/peoples/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/peoples/showPerson.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/news/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/news/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/news/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/news/showNews.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PD-pwsz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PD-pwsz.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Models/People.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/People.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/FormsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/FormsRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/prints/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prints/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,6 +152,7 @@
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/realrashid/sweet-alert" />
     </include_path>
   </component>
   <component name="ProjectId" id="1qqYE5rbExbedZD7lk8Hy9MbIoj" />
@@ -150,13 +165,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/peoples" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/news" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programowanie\Laravel\PD-pwsz\resources\views\news" />
       <recent name="E:\Programowanie\Laravel\PD-pwsz\resources\views\peoples" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -218,7 +234,8 @@
       <workItem from="1620581052924" duration="999000" />
       <workItem from="1621415071536" duration="9603000" />
       <workItem from="1621505696293" duration="72000" />
-      <workItem from="1621505775948" duration="5749000" />
+      <workItem from="1621505775948" duration="8749000" />
+      <workItem from="1621595424854" duration="4147000" />
     </task>
     <servers />
   </component>

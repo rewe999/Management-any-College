@@ -13,10 +13,14 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="{{route('news.add')}}">Dodaj druk</a> <br />
+                    <a href="{{route('form.add')}}">Dodaj druk</a> <br />
+                    <a href="{{route('news.add')}}">Pokaz druk(zrobic)</a> <br /><br />
+
                     <a href="{{route('people.add')}}">Dodaj pracownika</a> <br />
-                    <a href="{{route('people.edit')}}">Pokaż pracowników</a><br />
+                    <a href="{{route('people.edit')}}">Pokaż pracowników</a><br /><br />
+
                     <a href="{{route('news.add')}}">Dodaj aktualności</a><br />
+                    <a href="{{route('news.edit')}}">Pokaż aktualności</a><br /><br />
 {{--                    {{ __('You are logged in!') }}--}}
                     {{ \Illuminate\Support\Facades\Session::get('registered') }}
                 </div>

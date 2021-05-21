@@ -35,27 +35,26 @@ class FormController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FormsRequest $request)
     {
         $form = new Form();
         $form->title = $request->input('title');
-        $form->description = $request->input('desc');
-//        $form->save();
+        $form->description = $request->input('description');
+        $form->save();
 
         $attachment = new FormsAttachment();
-//        $attachment->attachment_id = $form->id;
-        $attachment->attachment_id = 5;
-        $path = $request->allFiles('files');
-        foreach($request->file('files') as $file)
-        {
-            $name=$file->getClientOriginalName();
-            $file->move(public_path().'/files/', $name);
-            $data[] = $name;
-        }
-
+        $attachment->attachment_id = $form->id;
+        if($request->hasfile('files')) {
+            foreach ($request->file('files') as $file) {
+                $name = $file->getClientOriginalName();
+                $file->move(public_path() . '/files/', $name);
+                $data[] = $name;
+            }
         $attachment->file = json_encode($data);
         $attachment->save();
+        }
 
+        return redirect('druki');
     }
 
     /**

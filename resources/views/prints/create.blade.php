@@ -10,12 +10,12 @@
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Tytuł</label>
-                <input class="form-control" id="title" placeholder="tytuł druku" name="title">
+                <input class="form-control" id="title" placeholder="tytuł druku" name="title" value="{{old('title')}}">
             </div>
 
             <div class="mb-3">
                 <label for="desc" class="form-label">Opis</label>
-                <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+                <textarea class="form-control" id="desc" rows="3" name="description" value="{{old('description')}}"></textarea>
             </div>
 
             <div class="mb-3">

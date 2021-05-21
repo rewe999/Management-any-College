@@ -25,7 +25,7 @@ class FormsRequest extends FormRequest
     {
         return [
             'title'=> 'required|string|min:4',
-            'description'=>'required|min:5|string',
+            'description'=>'required|string|min:5',
         ];
     }
 
