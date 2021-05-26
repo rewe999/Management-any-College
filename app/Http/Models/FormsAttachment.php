@@ -19,6 +19,6 @@ class FormsAttachment extends Model
 
     public function form()
     {
-        return $this->belongsToMany(Form::class);
+        return $this->hasMany(Form::class);
     }
 }

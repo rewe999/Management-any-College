@@ -86,8 +86,7 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
         $new = News::findOrFail($id);
-        $new->title = $request['title'];
-        $new->content = $request['content'];
+        $new->fill($request->all());
         $new->save();
 
         return redirect('aktualnosci/edit');

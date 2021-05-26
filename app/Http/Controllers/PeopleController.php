@@ -37,20 +37,13 @@ class PeopleController extends Controller
      */
     public function store(Request $request)
     {
-        $person = new People();
-        $person->title = $request['title'];
-        $person->name = $request['name'];
-        $person->surname = $request['surname'];
-        $person->section = $request['section'];
-        $person->position = $request['position'];
+        $person = new People($request->all());
         $person->sex = $request['gender'];
         $person->birth_date = $request['date'];
         if ($request->hasFile('avatar')){
             $path = $request['avatar']->store('avatars','public');
             $person->avatar = $path;
         }
-        $person->email = $request['email'];
-        $person->url = $request['url'];
         $person->save();
 
         return redirect('pracownicy');
@@ -96,19 +89,11 @@ class PeopleController extends Controller
     public function update(Request $request,int $id)
     {
         $person = People::findOrFail($id);
-        $person->title = $request['title'];
-        $person->name = $request['name'];
-        $person->surname = $request['surname'];
-        $person->section = $request['section'];
-        $person->position = $request['position'];
-        $person->sex = $request['gender'];
-        $person->birth_date = $request['date'];
+        $person->fill($request->all());
         if ($request->hasFile('avatar')){
             $path = $request['avatar']->store('avatars','public');
             $person->avatar = $path;
         }
-        $person->email = $request['email'];
-        $person->url = $request['url'];
         $person->save();
 
         return redirect('pracownicy/edit');

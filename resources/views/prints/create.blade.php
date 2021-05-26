@@ -6,7 +6,7 @@
         @if($errors)
             <p class="badge-danger">{{$errors->first()}}</p>
         @endif
-        <form method="POST" action="{{route('news.store')}}" enctype="multipart/form-data">
+        <form method="POST" action="{{route('form.store')}}" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Tytuł</label>
@@ -14,8 +14,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="desc" class="form-label">Opis</label>
-                <textarea class="form-control" id="desc" rows="3" name="description" value="{{old('description')}}"></textarea>
+                <label for="description" class="form-label">Opis</label>
+                <textarea class="form-control" id="description" rows="3" name="description">{{old('description')}}</textarea>
             </div>
 
             <div class="mb-3">

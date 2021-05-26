@@ -13,8 +13,13 @@ class Form extends Model
         'title','description'
     ];
 
+    public function getAttachment(int $id){
+        $attachment = FormsAttachment::where('attachment_id',$id)->get();
+        return $attachment;
+    }
+
     public function attachment()
     {
-        return $this->belongsToMany(FormsAttachment::class);
+        return $this->belongsTo(FormsAttachment::class);
     }
 }

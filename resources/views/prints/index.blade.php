@@ -14,24 +14,22 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Testowy tytuł</td>
-                    <td>Testowy opis</td>
-                    <td><a href="#">Testowy załącznik</a> </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Testowy tytuł2</td>
-                    <td>Testowy opis2</td>
-                    <td><a href="#">Testowy załącznik2</a> </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Testowy tytuł3</td>
-                    <td>Testowy opis3</td>
-                    <td><a href="#">Testowy załącznik3</a> </td>
-                </tr>
+                    @foreach($forms as $form)
+                        <tr>
+                            <th scope="row">{{$form->id}}</th>
+                            <td>{{$form->title}}</td>
+                            <td>{{$form->description}}</td>
+                            <td>
+{{--                                <a href="{{asset('files')}}/{{$attachments[$form->id]->file}}" class="d-inline">{{$attachments[$form->id]->file}}</a>--}}
+{{--                                {{$form->getAttachment($form->id)}}--}}
+                                <ul>
+                                @foreach($form->getAttachment($form->id) as $fo)
+                                    <li><a href="{{asset('files')}}/{{$fo->file}}" class="d-inline">{{$fo->file}}</a></li>
+                                @endforeach
+                                </ul>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

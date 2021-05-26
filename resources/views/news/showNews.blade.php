@@ -29,3 +29,11 @@
     </div>
 @endsection
 
+@section('javascript')
+    const id = $('.delete').attr('id');
+    const deleteURL = "{{ url('aktualnosci/usun/') }}" + "/" +id;
+@endsection
+
+@section('js-files')
+    <script src="{{asset('js/delete.js')}}"> </script>
+@endsection

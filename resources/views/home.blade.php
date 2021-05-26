@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     <a href="{{route('form.add')}}">Dodaj druk</a> <br />
-                    <a href="{{route('news.add')}}">Pokaz druk(zrobic)</a> <br /><br />
+                    <a href="{{route('form.edit')}}">Pokaz druki</a> <br /><br />
 
                     <a href="{{route('people.add')}}">Dodaj pracownika</a> <br />
                     <a href="{{route('people.edit')}}">Pokaż pracowników</a><br /><br />

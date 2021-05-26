@@ -2,27 +2,14 @@
 @section('title','Aktualności')
 @section('content')
     <div class="container">
-        <div class="row">
 
             <h1 class="text-center mx-auto">AKTUALNOŚCI</h1>
 
-            <ul id="news-list" class="simple-list-1">
                 @foreach($news as $new)
-                <li class="cf pb-5">
-                    <div class="circle-date fl pb-5">
-                        <h4 class="circle-date-day">24</h4>
-                        <h6 class="circle-date-month">Kwi.</h6>
+                    <div class="alert alert-primary" role="alert">
+                        <b>{{strtoupper($new->title)}}</b> [{{$new->date}}] <a href="{{route('news.show',$new->id)}}">zobacz więcej</a>
                     </div>
-                    <div class="news-header-wrapper fl"><a class="news-header basic-link-inv"
-                                                           href="{{route('news.show',$new->id)}}">
-                        {{$new->title}}
-                    </a></div>
-
-                    <div id="news-text" class="default-text" style="clear:both;">{{$new->content}}</div>
-                </li>
-                @endforeach
-            </ul>
-        </div>
+        @endforeach
     </div>
 @endsection
 
