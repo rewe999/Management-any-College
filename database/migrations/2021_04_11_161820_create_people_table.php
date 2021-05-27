@@ -20,7 +20,7 @@ class CreatePeopleTable extends Migration
             $table->string('surname');
             $table->string('section');
             $table->string('position');
-            $table->string('sex');
+            $table->string('gender');
             $table->date('birth_date');
             $table->string('avatar')->nullable();
             $table->boolean('active')->default(true);

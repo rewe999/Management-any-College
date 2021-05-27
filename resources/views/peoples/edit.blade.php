@@ -41,7 +41,7 @@
 
             <div class="mb-3">
                 <label for="gender" class="form-label">Płeć</label>
-                <input class="form-control" id="gender" placeholder="Płeć" name="gender" value="{{$person->sex}}">
+                <input class="form-control" id="gender" placeholder="Płeć" name="gender" value="{{$person->gender}}">
             </div>
 
             <div class="mb-3">
@@ -51,7 +51,7 @@
 
             <div class="mb-3">
                 <label for="inputAvatar" class="form-label">Avatar</label>
-                <input type="file" class="form-control" id="inputAvatar" name="avatar">
+                <input type="file" class="form-control" id="inputAvatar" name="avatar" value="{{$person->avatar}}">
             </div>
 
             <div class="mb-3">

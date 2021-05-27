@@ -21,9 +21,9 @@
                             <td>{{$form->description}}</td>
                             <td>
                                 <ul>
-                                @foreach($form->getAttachment($form->id) as $fo)
-                                    <li><a href="{{asset('files')}}/{{$fo->file}}" class="d-inline">{{$fo->file}}</a></li>
-                                @endforeach
+                                    @foreach($form->attachments as $fo)
+                                        <li><a href="{{asset('files')}}/{{$fo->file}}" class="d-inline">{{$fo->file}}</a></li>
+                                    @endforeach
                                 </ul>
                             </td>
                         </tr>

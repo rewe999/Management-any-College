@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Http\Models\FormsAttachment;
+use App\Http\Models\FormAttachments;
 use Illuminate\Database\Eloquent\Model;
 
 class Form extends Model
@@ -13,13 +13,8 @@ class Form extends Model
         'title','description'
     ];
 
-    public function getAttachment(int $id){
-        $attachment = FormsAttachment::where('attachment_id',$id)->get();
-        return $attachment;
-    }
-
-    public function attachment()
+    public function attachments()
     {
-        return $this->belongsTo(FormsAttachment::class);
+        return $this->hasMany(FormAttachments::class);
     }
 }

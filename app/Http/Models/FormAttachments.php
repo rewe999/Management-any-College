@@ -7,10 +7,8 @@ namespace App\Http\Models;
 use App\Form;
 use Illuminate\Database\Eloquent\Model;
 
-class FormsAttachment extends Model
+class FormAttachments extends Model
 {
-    protected $table = 'forms_attachment';
-
     public $timestamps=false;
 
     protected $fillable = [

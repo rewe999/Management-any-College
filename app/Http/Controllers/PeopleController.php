@@ -37,7 +37,7 @@ class PeopleController extends Controller
     public function store(Request $request)
     {
         $person = new People($request->all());
-        $person->sex = $request['gender'];
+        $person->gender = $request['gender'];
         $person->birth_date = $request['date'];
         if ($request->hasFile('avatar')){
             $path = $request['avatar']->store('avatars','public');

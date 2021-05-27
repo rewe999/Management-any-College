@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Form;
-use App\Http\Models\FormsAttachment;
+use App\Http\Models\FormAttachments;
 use App\Http\Requests\FormsRequest;
 use Illuminate\Http\Request;
 
@@ -16,8 +16,8 @@ class FormController extends Controller
      */
     public function index()
     {
-        $forms = Form::with('attachment')->get();
-        $attachments = FormsAttachment::all();
+        $forms = Form::with('attachments')->get();
+        $attachments = FormAttachments::all();
         return view('prints.index',['forms'=>$forms,'attachments' => $attachments]);
     }
 
@@ -51,8 +51,8 @@ class FormController extends Controller
                 $data[] = $name;
             }
             foreach ($data as $dat) {
-                $attachment = new FormsAttachment();
-                $attachment->attachment_id = $form->id;
+                $attachment = new FormAttachments();
+                $attachment->form_id = $form->id;
                 $attachment->file = $dat;
                 $attachment->save();
             }
@@ -86,7 +86,7 @@ class FormController extends Controller
     public function edit($id)
     {
         $form = Form::findOrFail($id);
-        $attachments = FormsAttachment::where('attachment_id', $id)->get();
+        $attachments = FormAttachments::where('form_id', $id)->get();
         return view('prints.edit', ['form' => $form, 'attachments' => $attachments]);
     }
 
@@ -111,8 +111,8 @@ class FormController extends Controller
                 $data[] = $name;
             }
             foreach ($data as $dat) {
-                $attachment = new FormsAttachment();
-                $attachment->attachment_id = $form->id;
+                $attachment = new FormAttachments();
+                $attachment->form_id = $form->id;
                 $attachment->file = $dat;
                 $attachment->save();
             }

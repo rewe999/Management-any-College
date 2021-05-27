@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFormsAttachmentTable extends Migration
+class CreateFormAttachmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateFormsAttachmentTable extends Migration
      */
     public function up()
     {
-        Schema::create('forms_attachment', function (Blueprint $table) {
+        Schema::create('form_attachments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("attachment_id");
-            $table->foreign("attachment_id")->references("id")->on("forms")
+            $table->unsignedBigInteger('form_id');
+            $table->foreign("form_id")->references("id")->on("forms")
                 ->onDelete("cascade");
             $table->string('file');
         });
@@ -29,6 +29,6 @@ class CreateFormsAttachmentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('forms_attachment');
+        Schema::dropIfExists('form_attachments');
     }
 }
