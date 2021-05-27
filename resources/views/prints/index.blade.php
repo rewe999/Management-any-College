@@ -20,8 +20,6 @@
                             <td>{{$form->title}}</td>
                             <td>{{$form->description}}</td>
                             <td>
-{{--                                <a href="{{asset('files')}}/{{$attachments[$form->id]->file}}" class="d-inline">{{$attachments[$form->id]->file}}</a>--}}
-{{--                                {{$form->getAttachment($form->id)}}--}}
                                 <ul>
                                 @foreach($form->getAttachment($form->id) as $fo)
                                     <li><a href="{{asset('files')}}/{{$fo->file}}" class="d-inline">{{$fo->file}}</a></li>

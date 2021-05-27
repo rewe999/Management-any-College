@@ -18,7 +18,7 @@
                     <th scope="row">{{$new->id}}</th>
                     <td>{{$new->date}}</td>
                     <td>{{$new->title}}</td>
-                    <td>{{$new->content}}</td>
+                    <td>{!! $new->content !!}</td>
                     <td>
                         <a href="{{route('news.edit.id',$new->id)}}"> <i class="fas fa-edit"></i> </a>
                         <a href="{{route('news.destroy',$new->id)}}"> <i class="fas fa-trash"></i> </a>

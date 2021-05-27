@@ -24,3 +24,10 @@
     </div>
 @endsection
 
+@section('javascript')
+    ClassicEditor
+    .create( document.querySelector( '#content' ) )
+    .catch( error => {
+    console.error( error );
+    } );
+@endsection

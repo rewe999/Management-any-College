@@ -7,7 +7,7 @@
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="true"
-                           href="#">{{$person[0]->title}} {{$person[0]->name}} {{$person[0]->surname}}</a>
+                           href="#">{{$person->title}} {{$person->name}} {{$person->surname}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="true" href="#">Sekcja dydaktyczna</a>
@@ -26,8 +26,15 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
-{{--                                    <img class="img-fluid" src="{{asset('assets/foto.jpg')}}" alt="">--}}
-                                    <img class="img-fluid" src="https://picsum.photos/200/300?random=2" alt="">
+                                    @if($person->avatar)
+                                        <p><img class="img-fluid"
+                                                src="{{asset('storage')}}/{{$person->avatar}}"
+                                                alt="card image"></p>
+                                    @else
+                                        <p><img class="img-fluid"
+                                                src="https://picsum.photos/200/300?random={{$person->id}}"
+                                                alt="card image"></p>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 desc">
@@ -40,7 +47,7 @@
                                         parturient duis est eleifend sociis rutrum odio viverra integer.</p>
                                     <div class="about-profile">
                                         <ul class="admin-profile ">
-                                            <li><span class="pro-title"> Name </span> <span class="pro-detail">{{$person[0]->name}}</span>
+                                            <li><span class="pro-title"> Name </span> <span class="pro-detail">{{$person->name}}</span>
                                             </li>
                                             <li><span class="pro-title"> Age </span> <span
                                                     class="pro-detail">25 Years</span></li>

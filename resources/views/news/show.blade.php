@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
     <div class="row bg-success text-center title">{{$new->title}}</div>
-        <div class="row pt-4">{{$new->content}}</div>
+        <div class="row pt-4">{!! $new->content !!}</div>
     </div>
 @endsection
 

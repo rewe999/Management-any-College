@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\People;
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class PeopleController extends Controller
 {
@@ -55,9 +54,9 @@ class PeopleController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
-        $person = People::findOrFail($id)->with('didactic')->get();
+        $person = People::with('didactic')->findOrFail($id);
         return view('peoples.show', ['person' => $person]);
     }
 

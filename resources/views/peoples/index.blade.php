@@ -3,8 +3,8 @@
 @section('content')
     <section id="team" class="pb-5">
         <div class="container">
-            <h5 class="section-title h1">POZNAJ NASZYCH PRACOWNIKÓW UCZELNI</h5>
-            <div class="row">
+            <h1 class="text-center text-white bg-dar">POZNAJ NASZYCH PRACOWNIKÓW UCZELNI</h1>
+            <div class="row pt-5">
                 <!-- Team member -->
                 @foreach($peoples as $people)
                     <div class="col-xs-12 col-sm-6 col-md-4">
@@ -13,9 +13,15 @@
                                 <div class="frontside">
                                     <div class="card">
                                         <div class="card-body text-center">
-                                            <p><img class="img-fluid"
-                                                    src="https://picsum.photos/200/300?random={{$people->id}}"
-                                                    alt="card image"></p>
+                                            @if($people->avatar)
+                                                <p><img class="img-fluid"
+                                                        src="{{asset('storage')}}/{{$people->avatar}}"
+                                                        alt="card image"></p>
+                                             @else
+                                                <p><img class="img-fluid"
+                                                        src="https://picsum.photos/200/300?random={{$people->id}}"
+                                                        alt="card image"></p>
+                                            @endif
                                             <h4 class="card-title">{{$people->title}} {{$people->name }} {{ $people->surname }}</h4>
                                             <p class="card-text">{{$people->section}}</p>
                                         </div>
