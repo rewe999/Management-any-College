@@ -10,13 +10,13 @@
                            href="#">{{$person->title}} {{$person->name}} {{$person->surname}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="true" href="#">Sekcja dydaktyczna</a>
+                        <a class="nav-link" aria-current="true" href="{{route('didactic.show',$person->id)}}">Sekcja dydaktyczna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sekcja naukowa</a>
+                        <a class="nav-link" href="{{route('scientific.show',$person->id)}}">Sekcja naukowa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sekcja organizacyjna</a>
+                        <a class="nav-link" href="{{route('organizational.show',$person->id)}}">Sekcja organizacyjna</a>
                     </li>
                 </ul>
             </div>

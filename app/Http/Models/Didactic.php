@@ -10,7 +10,7 @@ class Didactic extends Model
     public $timestamps=false;
 
     protected $fillable = [
-        'data','people_id',
+        'data','url','people_id',
     ];
 
     public function people()

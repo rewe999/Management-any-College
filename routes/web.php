@@ -45,7 +45,15 @@ Route::middleware(['auth'])->group(function (){
     Route::post('pracownicy/dodaj', 'PeopleController@store')->name('people.store');
     Route::put('pracownicy/aktualizuj/{id}', 'PeopleController@update')->name('people.update');
     Route::get('pracownicy/usun/{id}', 'PeopleController@destroy')->name('people.destroy');
+
+    Route::get('pracownicy/{id}/dydaktyczna/edit', 'DidacticController@edit')->name('didactic.edit');
+    Route::get('pracownicy/{id}/naukowa/edit', 'ScientificController@edit')->name('scientific.edit');
+    Route::get('pracownicy/{id}/organizacyjna/edit', 'OrganizationalController@edit')->name('organizational.edit');
 });
+
+Route::get('pracownicy/{id}/dydaktyczna', 'DidacticController@show')->name('didactic.show');
+Route::get('pracownicy/{id}/naukowa', 'ScientificController@show')->name('scientific.show');
+Route::get('pracownicy/{id}/organizacyjna', 'OrganizationalController@show')->name('organizational.show');
 
 Route::get('aktualnosci', 'NewsController@index')->name('news');
 Route::get('aktualnosci/{id}', 'NewsController@show')->name('news.show');
