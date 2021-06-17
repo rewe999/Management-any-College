@@ -46,8 +46,8 @@ class DidacticController extends Controller
      */
     public function show($id)
     {
-        $person = Didactic::with('people')->where('people_id',$id)->get();
-        return $person;
+        $person = Didactic::with('people')->get();
+        return view('didactic.show',compact('person'));
     }
 
     /**

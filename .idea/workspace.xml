@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/didactic/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/scientific/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DidacticController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DidacticController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScientificController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScientificController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Models/Didactic.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/Didactic.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/peoples/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/peoples/showPerson.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/showPerson.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,9 +155,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/news" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Docker" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -229,7 +234,9 @@
       <workItem from="1622038031699" duration="1537000" />
       <workItem from="1622109989198" duration="4659000" />
       <workItem from="1622118536943" duration="322000" />
-      <workItem from="1622124464448" duration="3242000" />
+      <workItem from="1622124464448" duration="3562000" />
+      <workItem from="1622458164528" duration="105000" />
+      <workItem from="1623916150676" duration="2182000" />
     </task>
     <servers />
   </component>

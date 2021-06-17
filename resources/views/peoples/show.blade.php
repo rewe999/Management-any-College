@@ -7,7 +7,7 @@
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="true"
-                           href="#">{{$person->title}} {{$person->name}} {{$person->surname}}</a>
+                           href="{{route('peoples.show',$person->id)}}">{{$person->title}} {{$person->name}} {{$person->surname}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="true" href="{{route('didactic.show',$person->id)}}">Sekcja dydaktyczna</a>

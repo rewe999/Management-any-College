@@ -47,7 +47,7 @@ class ScientificController extends Controller
     public function show($id)
     {
         $person = Scientific::with('people')->where('people_id',$id)->get();
-        return $person;
+        return view('scientific.show',compact('person'));
     }
 
     /**

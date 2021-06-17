@@ -47,7 +47,7 @@ class OrganizationalController extends Controller
     public function show($id)
     {
         $person = Organizational::with('people')->where('people_id',$id)->get();
-        return $person;
+        return view('organizational.show',compact('person'));
     }
 
     /**

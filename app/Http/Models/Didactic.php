@@ -9,6 +9,8 @@ class Didactic extends Model
 {
     public $timestamps=false;
 
+    protected $table = 'didactics';
+
     protected $fillable = [
         'data','url','people_id',
     ];
