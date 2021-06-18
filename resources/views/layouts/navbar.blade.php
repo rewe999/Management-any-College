@@ -1,25 +1,18 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="{{asset('assets/pwsz-logo.jpg')}}" class="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="/"><img src="{{asset('assets/pwsz-logo.jpg')}}" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav" data-toggle="collapse">
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#">STUDIA</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-                        <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
-                        <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#">INSTYTUT</a>
-                    <ul class="dropdown-menu">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        INSTYTUT
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="{{route('peoples.index')}}"> Pracownicy uczelni</a></li>
                         <li><a class="dropdown-item" href="{{route('print')}}"> Druki </a></li>
                         <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
@@ -30,7 +23,7 @@
 
                 @auth
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdownMenuLink" class="nav-link dropdown-toggle" href="#" role="button" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name }}
                         </a>
 
@@ -59,34 +52,9 @@
 </nav>
 
 <style>
-    .navbar {
-        background-color: #fff;
-    }
-
     .logo {
         width: 5rem;
         height: 5rem;
-    }
-
-    @media all and (min-width: 992px) {
-        .navbar .nav-item .dropdown-menu {
-            display: none;
-        }
-
-        .navbar .nav-item:hover .nav-link {
-        }
-
-        .navbar .nav-item:hover .dropdown-menu {
-            display: block;
-        }
-
-        .navbar .nav-item .dropdown-menu {
-            margin-top: 0;
-        }
-    }
-
-    .navbar-brand {
-        padding-left: 5rem;
     }
 
 </style>

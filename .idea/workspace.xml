@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/section.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/didactic/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/didactic/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/organizational/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/organizational/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/scientific/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scientific/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
