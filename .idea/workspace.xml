@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/didactic/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/scientific/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/section.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DidacticController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DidacticController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScientificController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScientificController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Models/Didactic.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/Didactic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/peoples/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/didactic/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/didactic/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/organizational/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/organizational/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/scientific/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scientific/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +234,8 @@
       <workItem from="1622118536943" duration="322000" />
       <workItem from="1622124464448" duration="3562000" />
       <workItem from="1622458164528" duration="105000" />
-      <workItem from="1623916150676" duration="2182000" />
+      <workItem from="1623916150676" duration="2333000" />
+      <workItem from="1624019703655" duration="1189000" />
     </task>
     <servers />
   </component>
