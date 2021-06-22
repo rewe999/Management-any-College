@@ -9,15 +9,23 @@
                         <a class="nav-link" aria-current="true"
                            href="{{route('peoples.show',$person[0]->people->id)}}">{{$person[0]->people->title}} {{$person[0]->people->name}} {{$person[0]->people->surname}}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ (request()->is('pracownicy/*/dydaktyczna')) ? 'active' : '' }}" aria-current="true" href="{{route('didactic.show',$person[0]->people->id)}}">Sekcja dydaktyczna</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ (request()->is('pracownicy/*/naukowa')) ? 'active' : '' }}" href="{{route('scientific.show',$person[0]->people->id)}}">Sekcja naukowa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ (request()->is('pracownicy/*/organizacyjna')) ? 'active' : '' }}" href="{{route('organizational.show',$person[0]->people->id)}}">Sekcja organizacyjna</a>
-                    </li>
+                    @if(count($person[0]->people->didactic) > 0)
+                        <li class="nav-item">
+                            <a class="nav-link {{ (request()->is('pracownicy/*/dydaktyczna')) ? 'active' : '' }}" aria-current="true" href="{{route('didactic.show',$person[0]->people->id)}}">Sekcja dydaktyczna</a>
+                        </li>
+                    @endif
+
+                    @if(count($person[0]->people->scientific) > 0)
+                        <li class="nav-item">
+                            <a class="nav-link {{ (request()->is('pracownicy/*/naukowa')) ? 'active' : '' }}" href="{{route('scientific.show',$person[0]->people->id)}}">Sekcja naukowa</a>
+                        </li>
+                    @endif
+
+                    @if(count($person[0]->people->organizational) > 0)
+                        <li class="nav-item">
+                            <a class="nav-link {{ (request()->is('pracownicy/*/organizacyjna')) ? 'active' : '' }}" href="{{route('organizational.show',$person[0]->people->id)}}">Sekcja organizacyjna</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
             <div class="card-body">

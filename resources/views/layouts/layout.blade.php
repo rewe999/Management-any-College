@@ -36,3 +36,9 @@
 @yield('js-files')
 </body>
 </html>
+
+<style>
+    .mt-5 {
+        min-height: 28.4vh;
+    }
+</style>

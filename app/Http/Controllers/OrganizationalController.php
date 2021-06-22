@@ -46,7 +46,13 @@ class OrganizationalController extends Controller
      */
     public function show($id)
     {
-        $person = Organizational::with('people')->where('people_id',$id)->get();
+        $section_not_exist = Organizational::where('people_id',$id)->first();
+        $person = Organizational::with(['people.didactic','people.organizational','people.scientific'])->where('people_id',$id)->get();
+
+        if($section_not_exist == []){
+            return redirect('pracownicy/'.$id);
+        }
+
         return view('organizational.show',compact('person'));
     }
 

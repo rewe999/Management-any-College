@@ -3,6 +3,8 @@
 namespace App;
 
 use App\Models\Didactic;
+use App\Models\Organizational;
+use App\Models\Scientific;
 use Illuminate\Database\Eloquent\Model;
 
 class People extends Model
@@ -18,5 +20,15 @@ class People extends Model
     public function didactic()
     {
         return $this->hasMany(Didactic::class);
+    }
+
+    public function organizational()
+    {
+        return $this->hasMany(Organizational::class);
+    }
+
+    public function scientific()
+    {
+        return $this->hasMany(Scientific::class);
     }
 }

@@ -9,15 +9,23 @@
                         <a class="nav-link active" aria-current="true"
                            href="{{route('peoples.show',$person->id)}}">{{$person->title}} {{$person->name}} {{$person->surname}}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="true" href="{{route('didactic.show',$person->id)}}">Sekcja dydaktyczna</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('scientific.show',$person->id)}}">Sekcja naukowa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('organizational.show',$person->id)}}">Sekcja organizacyjna</a>
-                    </li>
+                    @if(count($person->didactic) > 0)
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="true" href="{{route('didactic.show',$person->id)}}">Sekcja dydaktyczna</a>
+                        </li>
+                    @endif
+
+                    @if(count($person->scientific) > 0)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('scientific.show',$person->id)}}">Sekcja naukowa</a>
+                        </li>
+                    @endif
+
+                    @if(count($person->organizational) > 0)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('organizational.show',$person->id)}}">Sekcja organizacyjna</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
             <div class="card-body">

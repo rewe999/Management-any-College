@@ -56,7 +56,7 @@ class PeopleController extends Controller
      */
     public function show(int $id)
     {
-        $person = People::with('didactic')->findOrFail($id);
+        $person = People::with(['didactic','organizational','scientific'])->findOrFail($id);
         return view('peoples.show', ['person' => $person]);
     }
 

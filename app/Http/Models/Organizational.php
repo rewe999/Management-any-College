@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Organizational extends Model
 {
-    public $timestamps=false;
+    public $timestamps = false;
 
     protected $fillable = [
-        'data','people_id',
+        'data', 'people_id',
     ];
 
     public function people()
