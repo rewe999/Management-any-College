@@ -46,7 +46,13 @@ Route::middleware(['auth'])->group(function (){
     Route::put('pracownicy/aktualizuj/{id}', 'PeopleController@update')->name('people.update');
     Route::get('pracownicy/usun/{id}', 'PeopleController@destroy')->name('people.destroy');
 
+    Route::get('pracownicy/{id}/dydaktyczna/index', 'DidacticController@index')->name('didactic.index');
+    Route::get('pracownicy/{id}/dydaktyczna/create', 'DidacticController@create')->name('didactic.create');
+    Route::post('pracownicy/{id}/dydaktyczna/store', 'DidacticController@store')->name('didactic.store');
     Route::get('pracownicy/{id}/dydaktyczna/edit', 'DidacticController@edit')->name('didactic.edit');
+    Route::put('pracownicy/{id}/dydaktyczna/update', 'DidacticController@update')->name('didactic.update');
+    Route::delete('pracownicy/{id}/dydaktyczna/delete', 'DidacticController@destroy')->name('didactic.destroy');
+
     Route::get('pracownicy/{id}/naukowa/edit', 'ScientificController@edit')->name('scientific.edit');
     Route::get('pracownicy/{id}/organizacyjna/edit', 'OrganizationalController@edit')->name('organizational.edit');
 });
