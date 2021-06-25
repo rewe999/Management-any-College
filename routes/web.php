@@ -53,8 +53,19 @@ Route::middleware(['auth'])->group(function (){
     Route::put('pracownicy/{id}/dydaktyczna/update', 'DidacticController@update')->name('didactic.update');
     Route::delete('pracownicy/{id}/dydaktyczna/delete', 'DidacticController@destroy')->name('didactic.destroy');
 
+    Route::get('pracownicy/{id}/naukowa/index', 'ScientificController@index')->name('scientific.index');
+    Route::get('pracownicy/{id}/naukowa/create', 'ScientificController@create')->name('scientific.create');
+    Route::post('pracownicy/{id}/naukowa/store', 'ScientificController@store')->name('scientific.store');
     Route::get('pracownicy/{id}/naukowa/edit', 'ScientificController@edit')->name('scientific.edit');
+    Route::put('pracownicy/{id}/naukowa/update', 'ScientificController@update')->name('scientific.update');
+    Route::delete('pracownicy/{id}/naukowa/delete', 'ScientificController@destroy')->name('scientific.destroy');
+
+    Route::get('pracownicy/{id}/organizacyjna/index', 'OrganizationalController@index')->name('organizational.index');
+    Route::get('pracownicy/{id}/organizacyjna/create', 'OrganizationalController@create')->name('organizational.create');
+    Route::post('pracownicy/{id}/organizacyjna/store', 'OrganizationalController@store')->name('organizational.store');
     Route::get('pracownicy/{id}/organizacyjna/edit', 'OrganizationalController@edit')->name('organizational.edit');
+    Route::put('pracownicy/{id}/organizacyjna/update', 'OrganizationalController@update')->name('organizational.update');
+    Route::delete('pracownicy/{id}/organizacyjna/delete', 'OrganizationalController@destroy')->name('organizational.destroy');
 });
 
 Route::get('pracownicy/{id}/dydaktyczna', 'DidacticController@show')->name('didactic.show');

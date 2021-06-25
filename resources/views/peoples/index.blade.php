@@ -1,87 +1,93 @@
 @extends('layouts.layout')
 @section('title','Pracownicy Uczelni')
 @section('content')
-{{--    <section id="team" class="pb-5">--}}
-{{--        <div class="container">--}}
-{{--            <h1 class="text-center text-white bg-dar">POZNAJ NASZYCH PRACOWNIKÓW UCZELNI</h1>--}}
-{{--            <div class="row">--}}
-{{--                <!-- Team member -->--}}
-{{--                @foreach($peoples as $people)--}}
-{{--                    <div class="col-xs-12 col-sm-6 col-md-4">--}}
-{{--                        <div class="image-flip">--}}
-{{--                            <div class="mainflip">--}}
-{{--                                <div class="frontside">--}}
-{{--                                    <div class="card">--}}
-{{--                                        <div class="card-body text-center">--}}
-{{--                                            @if($people->avatar)--}}
-{{--                                                <p><img class="img-fluid"--}}
-{{--                                                        src="{{asset('storage')}}/{{$people->avatar}}"--}}
-{{--                                                        alt="card image"></p>--}}
-{{--                                             @else--}}
-{{--                                                <p><img class="img-fluid"--}}
-{{--                                                        src="https://picsum.photos/200/300?random={{$people->id}}"--}}
-{{--                                                        alt="card image"></p>--}}
-{{--                                            @endif--}}
-{{--                                            <h4 class="card-title">{{$people->title}} {{$people->name }} {{ $people->surname }}</h4>--}}
-{{--                                            <p class="card-text">{{$people->section}}</p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="backside">--}}
-{{--                                    <div class="card">--}}
-{{--                                        <div class="card-body text-center mt-4">--}}
-{{--                                            <h4 class="card-title">Witam!</h4>--}}
-{{--                                            <p>Nazywam się {{$people->name }} {{ $people->surname }} mam {{ 2021 - substr($people->birth_date, 0, 4) }} lat/a i moje zainteresowania to:</p>--}}
-{{--                                            @foreach($people->didactic as $did)--}}
-{{--                                                <ul class="card-text">--}}
-{{--                                                    <li> {{$did->data}} </li>--}}
-{{--                                                </ul>--}}
-{{--                                            @endforeach--}}
-{{--                                        </div>--}}
-{{--                                        <button type="button" class="btn btn-outline-info"><a href=" {{route('peoples.show',$people->id)}}"> Zobacz więcej o mnie </a></button>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <!-- ./Team member -->--}}
-{{--                @endforeach--}}
+    {{--    <section id="team" class="pb-5">--}}
+    {{--        <div class="container">--}}
+    {{--            <h1 class="text-center text-white bg-dar">POZNAJ NASZYCH PRACOWNIKÓW UCZELNI</h1>--}}
+    {{--            <div class="row">--}}
+    {{--                <!-- Team member -->--}}
+    {{--                @foreach($peoples as $people)--}}
+    {{--                    <div class="col-xs-12 col-sm-6 col-md-4">--}}
+    {{--                        <div class="image-flip">--}}
+    {{--                            <div class="mainflip">--}}
+    {{--                                <div class="frontside">--}}
+    {{--                                    <div class="card">--}}
+    {{--                                        <div class="card-body text-center">--}}
+    {{--                                            @if($people->avatar)--}}
+    {{--                                                <p><img class="img-fluid"--}}
+    {{--                                                        src="{{asset('storage')}}/{{$people->avatar}}"--}}
+    {{--                                                        alt="card image"></p>--}}
+    {{--                                             @else--}}
+    {{--                                                <p><img class="img-fluid"--}}
+    {{--                                                        src="https://picsum.photos/200/300?random={{$people->id}}"--}}
+    {{--                                                        alt="card image"></p>--}}
+    {{--                                            @endif--}}
+    {{--                                            <h4 class="card-title">{{$people->title}} {{$people->name }} {{ $people->surname }}</h4>--}}
+    {{--                                            <p class="card-text">{{$people->section}}</p>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="backside">--}}
+    {{--                                    <div class="card">--}}
+    {{--                                        <div class="card-body text-center mt-4">--}}
+    {{--                                            <h4 class="card-title">Witam!</h4>--}}
+    {{--                                            <p>Nazywam się {{$people->name }} {{ $people->surname }} mam {{ 2021 - substr($people->birth_date, 0, 4) }} lat/a i moje zainteresowania to:</p>--}}
+    {{--                                            @foreach($people->didactic as $did)--}}
+    {{--                                                <ul class="card-text">--}}
+    {{--                                                    <li> {{$did->data}} </li>--}}
+    {{--                                                </ul>--}}
+    {{--                                            @endforeach--}}
+    {{--                                        </div>--}}
+    {{--                                        <button type="button" class="btn btn-outline-info"><a href=" {{route('peoples.show',$people->id)}}"> Zobacz więcej o mnie </a></button>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <!-- ./Team member -->--}}
+    {{--                @endforeach--}}
 
-{{--                <div class="container">--}}
-{{--                    <div class="row">--}}
-{{--                        <div class="m-auto">{{ $peoples->links() }}</div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+    {{--                <div class="container">--}}
+    {{--                    <div class="row">--}}
+    {{--                        <div class="m-auto">{{ $peoples->links() }}</div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
 
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
-<div class="container">
-    <div class="row row-cols-2 row-cols-md-4 row-cols-sm-3 row-cols-xl-5 g-4">
-            @foreach($peoples as $people)
-                <div class="col pb-4">
-                    <div class="card">
-                        @if($people->avatar)
-                            <img src="{{asset('storage')}}/{{$people->avatar}}" class="img-fluid rounded mx-auto d-block" alt="image">
-                         @else
-                            <img src="https://picsum.photos/200/300?random={{$people->id}}" class="img-fluid rounded mx-auto d-block" alt="image">
-                        @endif
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
+    <div id="team">
+        <div class="container">
+            <div class="row row-cols-2 row-cols-md-4 row-cols-sm-3 row-cols-xl-5 g-4 pt-3">
+                @foreach($peoples as $people)
+                    <div class="col pb-4">
+                        <div class="card">
+                            @if($people->avatar)
+                                <img src="{{asset('storage')}}/{{$people->avatar}}"
+                                     class="img-fluid rounded mx-auto d-block" alt="image">
+                            @else
+                                <img src="https://picsum.photos/200/300?random={{$people->id}}"
+                                     class="img-fluid rounded mx-auto d-block" alt="image">
+                            @endif
 
-                        <div class="card-body">
-                            <h5 class="card-title">{{$people->title}} {{$people->name }} {{ $people->surname }}</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <a href="{{route('peoples.show',$people->id)}}" class="btn btn-primary">Więcej o pracowniku</a>
+                            <div class="card-body">
+                                <h5 class="card-title">{{$people->title}} {{$people->name }} {{ $people->surname }}</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <a href="{{route('peoples.show',$people->id)}}" class="btn btn-primary">Więcej o
+                                    pracowniku</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="m-auto">{{ $peoples->links() }}</div>
+            </div>
+        </div>
     </div>
-</div>
-                <div class="container">
-                    <div class="row">
-                        <div class="m-auto">{{ $peoples->links() }}</div>
-                    </div>
-                </div>>
 @endsection
 
 <style>
@@ -90,7 +96,8 @@
         /*height: 10rem;*/
         border-radius: 50%;
     }
-    .card-body{
+
+    .card-body {
         min-height: 10rem;
         max-height: 10rem;
         overflow: hidden;
@@ -103,7 +110,7 @@
         transition: all 1s ease;
     }
 
-    #team{
+    #team {
         background-image: url("{{asset('assets/pwsz-photo.jpg')}}");
         background-repeat: no-repeat;
         background-size: cover;

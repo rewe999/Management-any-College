@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/didactic/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/didactic/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/organizational/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/organizational/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/scientific/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/scientific/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DidacticController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DidacticController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganizationalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganizationalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScientificController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScientificController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/didactic/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/didactic/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/didactic/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/didactic/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/peoples/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/peoples/showPerson.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/showPerson.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -154,13 +161,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/organizational" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Docker" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programowanie\Laravel\PD-pwsz\resources\views\organizational" />
+      <recent name="E:\Programowanie\Laravel\PD-pwsz\resources\views\scientific" />
       <recent name="E:\Programowanie\Laravel\PD-pwsz\resources\views\news" />
       <recent name="E:\Programowanie\Laravel\PD-pwsz\resources\views\peoples" />
     </key>
@@ -241,7 +250,8 @@
       <workItem from="1624360418890" duration="2374000" />
       <workItem from="1624381403439" duration="6677000" />
       <workItem from="1624442855842" duration="3381000" />
-      <workItem from="1624523253101" duration="2304000" />
+      <workItem from="1624523253101" duration="2516000" />
+      <workItem from="1624621288832" duration="3626000" />
     </task>
     <servers />
   </component>
