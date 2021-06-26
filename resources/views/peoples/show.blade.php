@@ -11,7 +11,7 @@
                     </li>
                     @if(count($person->didactic) > 0)
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="true" href="{{route('didactic.show',$person->id)}}">Sekcja dydaktyczna</a>
+                            <a class="nav-link" href="{{route('didactic.show',$person->id)}}">Sekcja dydaktyczna</a>
                         </li>
                     @endif
 

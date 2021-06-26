@@ -39,7 +39,7 @@ class DidacticController extends Controller
     public function show($id)
     {
         $section_not_exist = Didactic::where('people_id',$id)->first();
-        $person = Didactic::with(['people.didactic','people.organizational','people.scientific'])->get();
+        $person = Didactic::with(['people.didactic','people.organizational','people.scientific'])->where('people_id',$id)->get();
 
         if($section_not_exist == []){
             return redirect('pracownicy/'.$id);
