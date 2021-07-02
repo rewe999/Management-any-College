@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.admin')
 @section('title','Dodaj druk')
 @section('content')
     <div class="container">

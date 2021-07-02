@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.admin')
 @section('title','Edytuj aktualności')
 @section('content')
     <div class="container">
@@ -16,7 +16,7 @@
 
             <div class="mb-3">
                 <label for="content" class="form-label">Opis</label>
-                <textarea class="form-control" id="content" rows="3" name="content">{{$new->content}}</textarea>
+                <textarea class="form-control" id="textEditor" rows="3" name="content">{{$new->content}}</textarea>
             </div>
 
             <button type="submit" class="btn btn-primary text-center">Edytuj</button>
@@ -26,7 +26,7 @@
 
 @section('javascript')
     ClassicEditor
-    .create( document.querySelector( '#content' ) )
+    .create( document.querySelector( '#textEditor' ) )
     .catch( error => {
     console.error( error );
     } );

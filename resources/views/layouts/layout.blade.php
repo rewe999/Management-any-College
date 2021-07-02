@@ -24,7 +24,7 @@
 <body>
 @include('layouts.navbar')
 @include('sweetalert::alert')
-<div class="mt-5 mb-5">
+<div class="">
     @yield('content')
 </div>
 @include('layouts.footer')
