@@ -22,7 +22,9 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth'])->group(function (){
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', function (){
+        return view('admin.dashboard');
+    })->name('home');
 
     Route::delete('zalacznik/usun/{id}', 'AttachmentController@destroy')->name('attachment.destroy');
 

@@ -15,14 +15,13 @@
                 <label for="title" class="form-label">Dane</label>
                 <input type="text" class="form-control" id="title" placeholder="Dane" name="data" value="{{$person->data}}">
             </div>
-            <button type="submit" class="btn btn-primary text-center">EDYTUJ</button>
+            <button type="submit" class="btn btn-primary text-center d-inline">EDYTUJ</button>
         </form>
 
         <form action="{{route('scientific.destroy',$person->people->id)}}" method="POST">
             @csrf
             @method('DELETE')
-            <button type="submit" class="btn btn-danger text-center">USUŃ</button>
+            <button type="submit" class="btn btn-danger text-center d-inline">USUŃ</button>
         </form>
-
-    </div>
+        </div>
 @endsection
