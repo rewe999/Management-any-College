@@ -1,6 +1,11 @@
 @extends('layouts.admin')
 @section('title','osoba')
 @section('content')
+    @if(session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
     <div class="container">
         <h1 class="text-center">Edytuj Pracownika</h1>
         @if($person->avatar)

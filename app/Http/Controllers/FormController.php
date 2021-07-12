@@ -9,11 +9,6 @@ use Illuminate\Http\Request;
 
 class FormController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $forms = Form::with('attachments')->get();
@@ -21,22 +16,12 @@ class FormController extends Controller
         return view('prints.index',['forms'=>$forms,'attachments' => $attachments]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('prints.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(FormsRequest $request)
     {
         $form = new Form();
@@ -58,7 +43,7 @@ class FormController extends Controller
             }
         }
 
-        return redirect('druki/edit');
+        return redirect()->route('form.edit')->with('message','Druk '.$form->title.' został dodany');
     }
 
     public function showPrints()
@@ -66,23 +51,11 @@ class FormController extends Controller
         return view('prints.showPrints', ['prints' => Form::all()]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         return $id;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $form = Form::findOrFail($id);
@@ -90,13 +63,6 @@ class FormController extends Controller
         return view('prints.edit', ['form' => $form, 'attachments' => $attachments]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $form = Form::findOrFail($id);
@@ -118,20 +84,14 @@ class FormController extends Controller
             }
         }
 
-        return redirect('druki/edit');
+        return redirect('druki/edit')->with('message','Druk '.$form->title.' został edytowany');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $form = Form::findOrFail($id);
         $form->delete();
 
-        return redirect('druki/edit');
+        return redirect('druki/edit')->with('message','Druk '.$form->title.' został usunięty');
     }
 }

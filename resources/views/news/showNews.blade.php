@@ -1,6 +1,11 @@
 @extends('layouts.admin')
 @section('title','Edytuj aktualności')
 @section('content')
+    @if(session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
     <div class="container">
         <div class="table-responsive">
             <table class="table">
@@ -21,12 +26,10 @@
                         <td>{{$new->title}}</td>
                         <td>{!! $new->content !!}</td>
                         <td class="d-flex">
-                            <a href="{{route('news.edit.id',$new->id)}}"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button></a>
-                            <form action="{{route('news.destroy',$new->id)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
-                            </form>
+{{--                            <a href="{{route('news.edit.id',$new->id)}}"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button></a>--}}
+
+                            <button class="btn btn-danger btn-sm delete" data-id="{{ $new->id }}" data-title={{ $new->title }}><i class="fas fa-trash"></i></button>
+
                         </td>
                     </tr>
                 @endforeach
@@ -36,8 +39,8 @@
 @endsection
 
 @section('javascript')
-    const id = $('.delete').attr('id');
-    const deleteURL = "{{ url('aktualnosci/usun/') }}" + "/" +id;
+    const deleteUrl = "{{ url('aktualnosci') }}/";
+    const confirmDelete = "Czy na pewno chcesz usunąć ?";
 @endsection
 
 @section('js-files')

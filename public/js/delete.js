@@ -93,28 +93,30 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-$('.delete').click(function () {
-  Swal.fire({
-    title: "Czy na pewno chcesz usunąc rekord ?",
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonText: 'Tak',
-    cancelButtonText: 'Nie'
-  }).then(function (result) {
-    if (result.value) {
-      $.ajax({
-        method: "DELETE",
-        url: deleteURL,
-        data: {
-          _token: $('input[name=_token]').val()
-        }
-      }).done(function () {
-        window.location.reload();
-      }).fail(function (err) {
-        console.log(err);
-        Swal.fire('Nie udało sie!', 'Rekord nie został usunięty!', 'error');
-      });
-    }
+$(function () {
+  $('.delete').click(function () {
+    var _this = this;
+
+    console.log($(this).data("id"));
+    Swal.fire({
+      title: confirmDelete + $(this).data("title"),
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Tak',
+      cancelButtonText: 'Nie'
+    }).then(function (result) {
+      if (result.value) {
+        $.ajax({
+          method: "DELETE",
+          url: deleteUrl + $(_this).data("id")
+        }).done(function (data) {
+          window.location.reload();
+        }).fail(function (data) {
+          console.log(data);
+          Swal.fire('Oops...', data.responseJSON.message, data.responseJSON.status);
+        });
+      }
+    });
   });
 });
 

@@ -32,7 +32,7 @@ class PeopleController extends Controller
         }
         $person->save();
 
-        return redirect('pracownicy');
+        return redirect()->route('people.edit')->with('message',"Pracownik {$person->name} {$person->surname} został dodany");
     }
 
     public function show(int $id)
@@ -63,7 +63,7 @@ class PeopleController extends Controller
         }
         $person->save();
 
-        return redirect('pracownicy/edit');
+        return redirect()->back()->with('message',"Pracownik {$person->name} został edytowany");
     }
 
     public function destroy($id)
@@ -71,6 +71,6 @@ class PeopleController extends Controller
         $person = People::findOrFail($id);
         $person->delete();
 
-        return redirect('pracownicy/edit');
+        return redirect()->route('people.edit')->with('message',"Pracownik {$person->name} {$person->surname} został usunięty");
     }
 }

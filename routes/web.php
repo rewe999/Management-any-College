@@ -30,11 +30,11 @@ Route::middleware(['auth'])->group(function (){
 
     Route::get('aktualnosci/dodaj', 'NewsController@create')->name('news.add');
     Route::post('aktualnosci/dodaj', 'NewsController@store')->name('news.store');
-    Route::get('aktualnosci/edit', 'NewsController@show')->name('news.show');
+//    Route::get('aktualnosci/edit', 'NewsController@show')->name('news.show');
     Route::get('aktualnosci/edit', 'NewsController@showNews')->name('news.edit');
     Route::get('aktualnosci/edit/{id}', 'NewsController@edit')->name('news.edit.id');
     Route::put('aktualnosci/aktualizuj/{id}', 'NewsController@update')->name('news.update');
-    Route::delete('aktualnosci/usun/{id}', 'NewsController@destroy')->name('news.destroy');
+    Route::delete('aktualnosci/{id}', 'NewsController@destroy')->name('news.destroy');
 
 
     Route::get('druki/dodaj', 'FormController@create')->name('form.add');
