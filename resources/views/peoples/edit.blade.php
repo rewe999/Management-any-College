@@ -45,8 +45,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="date" class="form-label">Data urodzenia</label>
-                <input class="form-control" type="date" id="date" name="date" value="{{$person->birth_date}}">
+                <label for="birth_date" class="form-label">Data urodzenia</label>
+                <input class="form-control" type="date" id="birth_date" name="birth_date" value="{{$person->birth_date}}">
             </div>
 
             <div class="mb-3">

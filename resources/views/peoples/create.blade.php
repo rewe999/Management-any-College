@@ -10,37 +10,37 @@
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Tytuł</label>
-                <input class="form-control" id="title" placeholder="Tytuł" name="title">
+                <input class="form-control" id="title" placeholder="Tytuł" name="title" value="{{old('title')}}">
             </div>
 
             <div class="mb-3">
                 <label for="name" class="form-label">Imię</label>
-                <input class="form-control" id="name" placeholder="Imię" name="name">
+                <input class="form-control" id="name" placeholder="Imię" name="name" value="{{old('name')}}">
             </div>
 
             <div class="mb-3">
                 <label for="surname" class="form-label">Nazwisko</label>
-                <input class="form-control" id="surname" placeholder="Nazwisko" name="surname">
+                <input class="form-control" id="surname" placeholder="Nazwisko" name="surname" value="{{old('surname')}}">
             </div>
 
             <div class="mb-3">
                 <label for="section" class="form-label">Sekcja</label>
-                <input class="form-control" id="section" placeholder="Sekcja" name="section">
+                <input class="form-control" id="section" placeholder="Sekcja" name="section" value="{{old('section')}}">
             </div>
 
             <div class="mb-3">
                 <label for="position" class="form-label">Pozycja</label>
-                <input class="form-control" id="position" placeholder="Sekcja" name="position">
+                <input class="form-control" id="position" placeholder="Sekcja" name="position" value="{{old('position')}}">
             </div>
 
             <div class="mb-3">
                 <label for="gender" class="form-label">Płeć</label>
-                <input class="form-control" id="gender" placeholder="Płeć" name="gender">
+                <input class="form-control" id="gender" placeholder="Płeć" name="gender" value="{{old('gender')}}">
             </div>
 
             <div class="mb-3">
-                <label for="date" class="form-label">Data urodzenia</label>
-                <input class="form-control" type="datetime-local" id="date" name="date">
+                <label for="birth_date" class="form-label">Data urodzenia</label>
+                <input class="form-control" type="date" id="birth_date" name="birth_date">
             </div>
 
             <div class="mb-3">
@@ -50,12 +50,12 @@
 
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input class="form-control" id="email" placeholder="Email" name="email">
+                <input class="form-control" id="email" placeholder="Email" name="email" value="{{old('email')}}">
             </div>
 
             <div class="mb-3">
                 <label for="url" class="form-label">Url</label>
-                <input class="form-control" id="url" placeholder="Url" name="url">
+                <input class="form-control" id="url" placeholder="Url" name="url" value="{{old('url')}}">
             </div>
 
             <button type="submit" class="btn btn-primary text-center">Dodaj</button>

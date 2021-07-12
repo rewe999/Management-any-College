@@ -12,7 +12,7 @@ class People extends Model
     public $timestamps=false;
 
     protected $fillable = [
-        'title','name', 'surname', 'section','avatar','position','sex','birth_date','avatar','active','email','url'
+        'title','name', 'surname', 'section','avatar','position','gender','birth_date','active','email','url'
     ];
 
     protected $dates = ['date'];

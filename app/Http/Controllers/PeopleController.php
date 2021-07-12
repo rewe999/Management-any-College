@@ -2,43 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PersonRequest;
 use App\People;
 use Illuminate\Http\Request;
 
 class PeopleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $peoples = People::orderBy('name')->with('didactic')->paginate(6);
         return view('peoples.index', ['peoples' => $peoples]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('peoples.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function store(PersonRequest $request)
     {
-        $person = new People($request->all());
+        $person = new People($request->validated());
         $person->gender = $request['gender'];
-        $person->birth_date = $request['date'];
+        $person->birth_date = $request['birth_date'];
         if ($request->hasFile('avatar')){
             $path = $request['avatar']->store('avatars','public');
             $person->avatar = $path;
@@ -48,12 +35,6 @@ class PeopleController extends Controller
         return redirect('pracownicy');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function show(int $id)
     {
         $person = People::with(['didactic','organizational','scientific'])->findOrFail($id);
@@ -66,29 +47,16 @@ class PeopleController extends Controller
         return view('peoples.showPerson',['persons' => $persons]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $person = People::findOrFail($id);
         return view('peoples.edit',['person' => $person]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function update(Request $request,int $id)
+    public function update(PersonRequest $request,int $id)
     {
         $person = People::findOrFail($id);
-        $person->fill($request->all());
+        $person->fill($request->validated());
         if ($request->hasFile('avatar')){
             $path = $request['avatar']->store('avatars','public');
             $person->avatar = $path;
@@ -98,12 +66,6 @@ class PeopleController extends Controller
         return redirect('pracownicy/edit');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $person = People::findOrFail($id);
