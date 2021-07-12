@@ -18,9 +18,13 @@
                         <th scope="row">{{$print->id}}</th>
                         <td>{{$print->title}}</td>
                         <td>{{$print->description}}</td>
-                        <td>
-                            <a href="{{route('form.edit.id',$print->id)}}"> <i class="fas fa-edit"></i> </a>
-                            <a href="{{route('form.destroy',$print->id)}}"> <i class="fas fa-trash"></i> </a>
+                        <td class="d-flex">
+                            <a href="{{route('form.edit.id',$print->id)}}"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button></a>
+                            <form action="{{route('form.destroy',$print->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

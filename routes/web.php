@@ -34,7 +34,7 @@ Route::middleware(['auth'])->group(function (){
     Route::get('aktualnosci/edit', 'NewsController@showNews')->name('news.edit');
     Route::get('aktualnosci/edit/{id}', 'NewsController@edit')->name('news.edit.id');
     Route::put('aktualnosci/aktualizuj/{id}', 'NewsController@update')->name('news.update');
-    Route::get('aktualnosci/usun/{id}', 'NewsController@destroy')->name('news.destroy');
+    Route::delete('aktualnosci/usun/{id}', 'NewsController@destroy')->name('news.destroy');
 
 
     Route::get('druki/dodaj', 'FormController@create')->name('form.add');
@@ -42,7 +42,7 @@ Route::middleware(['auth'])->group(function (){
     Route::put('druki/aktualizuj/{id}', 'FormController@update')->name('form.update');
     Route::get('druki/edit', 'FormController@showPrints')->name('form.edit');
     Route::get('druki/edit/{id}', 'FormController@edit')->name('form.edit.id');
-    Route::get('druki/usun/{id}', 'FormController@destroy')->name('form.destroy');
+    Route::delete('druki/usun/{id}', 'FormController@destroy')->name('form.destroy');
 
 
     Route::get('pracownicy/dodaj', 'PeopleController@create')->name('people.add');
@@ -50,7 +50,7 @@ Route::middleware(['auth'])->group(function (){
     Route::get('pracownicy/edit/{id}', 'PeopleController@edit')->name('people.edit.id');
     Route::post('pracownicy/dodaj', 'PeopleController@store')->name('people.store');
     Route::put('pracownicy/aktualizuj/{id}', 'PeopleController@update')->name('people.update');
-    Route::get('pracownicy/usun/{id}', 'PeopleController@destroy')->name('people.destroy');
+    Route::delete('pracownicy/usun/{id}', 'PeopleController@destroy')->name('people.destroy');
 
     Route::get('pracownicy/{id}/dydaktyczna/index', 'DidacticController@index')->name('didactic.index');
     Route::get('pracownicy/{id}/dydaktyczna/create', 'DidacticController@create')->name('didactic.create');

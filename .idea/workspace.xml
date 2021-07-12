@@ -7,9 +7,9 @@
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Models/People.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/People.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/peoples/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/peoples/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news/showNews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/showNews.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/peoples/showPerson.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/showPerson.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +249,7 @@
       <workItem from="1625216850854" duration="4993000" />
       <workItem from="1625753295019" duration="1971000" />
       <workItem from="1625921017921" duration="21000" />
-      <workItem from="1626089286503" duration="2070000" />
+      <workItem from="1626089286503" duration="3071000" />
     </task>
     <servers />
   </component>

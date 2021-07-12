@@ -20,9 +20,13 @@
                         <td>{{$new->date}}</td>
                         <td>{{$new->title}}</td>
                         <td>{!! $new->content !!}</td>
-                        <td>
-                            <a href="{{route('news.edit.id',$new->id)}}"> <i class="fas fa-edit"></i> </a>
-                            <a href="{{route('news.destroy',$new->id)}}"> <i class="fas fa-trash"></i> </a>
+                        <td class="d-flex">
+                            <a href="{{route('news.edit.id',$new->id)}}"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button></a>
+                            <form action="{{route('news.destroy',$new->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

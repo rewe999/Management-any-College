@@ -31,9 +31,13 @@
                             <button class="btn btn-success"><a href="{{route('organizational.index',$person->id)}}"
                                                                class="text-white">Edytuj</a></button>
                         </td>
-                        <td>
-                            <a href="{{route('people.edit.id',$person->id)}}"> <i class="fas fa-edit"></i> </a>
-                            <a href="{{route('people.destroy',$person->id)}}"> <i class="fas fa-trash"></i> </a>
+                        <td class="d-flex">
+                            <a href="{{route('people.edit.id',$person->id)}}"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button></a>
+                            <form action="{{route('people.destroy',$person->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

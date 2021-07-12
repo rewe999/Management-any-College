@@ -29,13 +29,13 @@
             <button type="submit" class="btn btn-primary text-center">Edytuj</button>
         </form>
 
-        <ul>
+        <ul class="pt-4">
             @foreach($attachments as $att)
-                <li><a href="{{asset('files')}}/{{$att->file}}" class="d-inline">{{$att->file}}</a>
+                <li class="d-flex"><a href="{{asset('files')}}/{{$att->file}}" class="d-inline">{{$att->file}}</a>
                     <form action="{{route('attachment.destroy',$att->id)}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-danger">D</button>
+                        <button class="btn btn-danger btn-sm ml-2"><i class="fas fa-trash"></i></button>
                     </form>
                 </li>
             @endforeach

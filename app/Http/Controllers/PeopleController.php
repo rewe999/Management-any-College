@@ -10,7 +10,7 @@ class PeopleController extends Controller
 {
     public function index()
     {
-        $peoples = People::orderBy('name')->with('didactic')->paginate(6);
+        $peoples = People::orderBy('name')->with('didactic')->paginate(10);
         return view('peoples.index', ['peoples' => $peoples]);
     }
 
