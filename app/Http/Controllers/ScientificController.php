@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ScientificRequest;
 use App\Models\Scientific;
 use App\People;
+use Exception;
 use Illuminate\Http\Request;
 
 class ScientificController extends Controller
@@ -66,9 +67,18 @@ class ScientificController extends Controller
 
     public function destroy($id)
     {
-        $person = Scientific::where('people_id',$id)->first();
-        $person->delete();
-
-        return redirect()->route('people.edit');
+        try {
+            $person = Scientific::where('people_id',$id)->first();
+            if ($person != null) {
+                $person->delete();
+                session()->flash('message','usunięto sekcje naukową');
+                return redirect()->route('people.edit');
+            }
+        } catch (Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Wystąpił błąd!'
+            ])->setStatusCode(500);
+        }
     }
 }

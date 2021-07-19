@@ -38,11 +38,7 @@
                         </td>
                         <td class="d-flex">
                             <a href="{{route('people.edit.id',$person->id)}}"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button></a>
-                            <form action="{{route('people.destroy',$person->id)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
-                            </form>
+                            <button class="btn btn-danger btn-sm delete" data-id="{{ $person->id }}" data-title="{{ $person->title }} {{ $person->name }} {{ $person->surname }}"><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
                 @endforeach
@@ -50,3 +46,13 @@
         </div>
     </div>
 @endsection
+
+@section('javascript')
+    const deleteUrl = "{{ url('pracownicy') }}/";
+    const confirmDelete = "Czy na pewno chcesz usunąć ?";
+@endsection
+
+@section('js-files')
+    <script src="{{asset('js/delete.js')}}"></script>
+@endsection
+

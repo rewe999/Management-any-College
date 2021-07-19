@@ -1,6 +1,5 @@
 $(function () {
     $('.delete').click(function() {
-        console.log($(this).data("id"))
         Swal.fire({
             title: confirmDelete + $(this).data("title"),
             icon: 'warning',

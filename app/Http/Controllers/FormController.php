@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Form;
 use App\Http\Models\FormAttachments;
 use App\Http\Requests\FormsRequest;
+use Exception;
 use Illuminate\Http\Request;
 
 class FormController extends Controller
@@ -89,9 +90,19 @@ class FormController extends Controller
 
     public function destroy($id)
     {
-        $form = Form::findOrFail($id);
-        $form->delete();
+        try {
+            $form = Form::findOrFail($id);
+            $form->delete();
 
-        return redirect('druki/edit')->with('message','Druk '.$form->title.' został usunięty');
+            session()->flash('message','Usunięto druk '.$form->title);
+            return response()->json([
+                'message' => 'success'
+            ]);
+        } catch (Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Wystąpił błąd!'
+            ])->setStatusCode(500);
+        }
     }
 }

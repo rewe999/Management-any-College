@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\News;
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
@@ -62,8 +63,9 @@ class NewsController extends Controller
         try {
             $new = News::findOrFail($id);
             $new->delete();
+            session()->flash('message','Usunięto aktualność '.$new->title);
             return response()->json([
-                'status' => 'success'
+                'message' => 'success'
             ]);
         } catch (Exception $e) {
             return response()->json([

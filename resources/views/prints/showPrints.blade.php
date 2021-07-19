@@ -25,15 +25,20 @@
                         <td>{{$print->description}}</td>
                         <td class="d-flex">
                             <a href="{{route('form.edit.id',$print->id)}}"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button></a>
-                            <form action="{{route('form.destroy',$print->id)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
-                            </form>
+                            <button class="btn btn-danger btn-sm delete" data-id="{{ $print->id }}" data-title={{ $print->title }}><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
                 @endforeach
             </table>
         </div>
     </div>
+@endsection
+
+@section('javascript')
+    const deleteUrl = "{{ url('druki') }}/";
+    const confirmDelete = "Czy na pewno chcesz usunąć ?";
+@endsection
+
+@section('js-files')
+    <script src="{{asset('js/delete.js')}}"></script>
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PersonRequest;
 use App\People;
+use Exception;
 use Illuminate\Http\Request;
 
 class PeopleController extends Controller
@@ -68,9 +69,18 @@ class PeopleController extends Controller
 
     public function destroy($id)
     {
-        $person = People::findOrFail($id);
-        $person->delete();
-
-        return redirect()->route('people.edit')->with('message',"Pracownik {$person->name} {$person->surname} został usunięty");
+        try {
+            $person = People::findOrFail($id);
+            $person->delete();
+            session()->flash('message','Usunięto pracownika '.$person->name." ".$person->surname);
+            return response()->json([
+                'message' => 'success'
+            ]);
+        } catch (Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Wystąpił błąd!'
+            ])->setStatusCode(500);
+        }
     }
 }

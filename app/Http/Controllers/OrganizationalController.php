@@ -68,7 +68,7 @@ class OrganizationalController extends Controller
     {
         $person = Organizational::where('people_id',$id)->first();
         $person->delete();
-
+        session()->flash('message','usunięto sekcje organizacyjną ');
         return redirect()->route('people.edit');
     }
 }

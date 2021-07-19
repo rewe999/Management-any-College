@@ -66,6 +66,7 @@ class DidacticController extends Controller
     public function destroy($id)
     {
         $person = Didactic::where('people_id',$id)->first();
+        session()->flash('message','usunięto sekcje dydaktyczną');
         $person->delete();
 
         return redirect()->route('people.edit');

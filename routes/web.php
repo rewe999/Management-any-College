@@ -42,7 +42,7 @@ Route::middleware(['auth'])->group(function (){
     Route::put('druki/aktualizuj/{id}', 'FormController@update')->name('form.update');
     Route::get('druki/edit', 'FormController@showPrints')->name('form.edit');
     Route::get('druki/edit/{id}', 'FormController@edit')->name('form.edit.id');
-    Route::delete('druki/usun/{id}', 'FormController@destroy')->name('form.destroy');
+    Route::delete('druki/{id}', 'FormController@destroy')->name('form.destroy');
 
 
     Route::get('pracownicy/dodaj', 'PeopleController@create')->name('people.add');
@@ -50,7 +50,7 @@ Route::middleware(['auth'])->group(function (){
     Route::get('pracownicy/edit/{id}', 'PeopleController@edit')->name('people.edit.id');
     Route::post('pracownicy/dodaj', 'PeopleController@store')->name('people.store');
     Route::put('pracownicy/aktualizuj/{id}', 'PeopleController@update')->name('people.update');
-    Route::delete('pracownicy/usun/{id}', 'PeopleController@destroy')->name('people.destroy');
+    Route::delete('pracownicy/{id}', 'PeopleController@destroy')->name('people.destroy');
 
     Route::get('pracownicy/{id}/dydaktyczna/index', 'DidacticController@index')->name('didactic.index');
     Route::get('pracownicy/{id}/dydaktyczna/create', 'DidacticController@create')->name('didactic.create');
@@ -64,7 +64,7 @@ Route::middleware(['auth'])->group(function (){
     Route::post('pracownicy/{id}/naukowa/store', 'ScientificController@store')->name('scientific.store');
     Route::get('pracownicy/{id}/naukowa/edit', 'ScientificController@edit')->name('scientific.edit');
     Route::put('pracownicy/{id}/naukowa/update', 'ScientificController@update')->name('scientific.update');
-    Route::delete('pracownicy/{id}/naukowa/delete', 'ScientificController@destroy')->name('scientific.destroy');
+    Route::delete('pracownicy/naukowa/{id}', 'ScientificController@destroy')->name('scientific.destroy');
 
     Route::get('pracownicy/{id}/organizacyjna/index', 'OrganizationalController@index')->name('organizational.index');
     Route::get('pracownicy/{id}/organizacyjna/create', 'OrganizationalController@create')->name('organizational.create');
