@@ -33,7 +33,9 @@ class OrganizationalController extends Controller
         $organizational->people_id = $id;
         $organizational->save();
 
-        return redirect('pracownicy/edit');
+        $PersonData = $organizational->people->title . " " . $organizational->people->name . " " . $organizational->people->surname;
+        session()->flash('message','Utworzono sekcje organizacyjną ' . $PersonData);
+        return redirect()->route('people.edit');
     }
 
     public function show($id)
@@ -61,14 +63,18 @@ class OrganizationalController extends Controller
         $person->data = $request['data'];
         $person->save();
 
-        return redirect()->route('organizational.edit',$id);
+        $PersonData = $person->people->title . " " . $person->people->name . " " . $person->people->surname;
+        session()->flash('message','Edytowano sekcje organizacyjną ' . $PersonData);
+        return redirect()->route('people.edit');
     }
 
     public function destroy($id)
     {
         $person = Organizational::where('people_id',$id)->first();
         $person->delete();
-        session()->flash('message','usunięto sekcje organizacyjną ');
+
+        $PersonData = $person->people->title . " " . $person->people->name . " " . $person->people->surname;
+        session()->flash('message','Usunięto sekcje organizacyjną ' . $PersonData);
         return redirect()->route('people.edit');
     }
 }

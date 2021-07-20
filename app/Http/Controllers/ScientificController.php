@@ -35,7 +35,9 @@ class ScientificController extends Controller
         $scientific->people_id = $id;
         $scientific->save();
 
-        return redirect('pracownicy/edit');
+        $PersonData = $scientific->people->title . " " . $scientific->people->name . " " . $scientific->people->surname;
+        session()->flash('message','Utworzono sekcje naukową ' . $PersonData);
+        return redirect()->route('people.edit');
     }
 
     public function show($id)
@@ -61,8 +63,10 @@ class ScientificController extends Controller
         $person = Scientific::where('people_id',$id)->first();
         $person->data = $request['data'];
         $person->save();
+        $PersonData = $person->people->title . " " . $person->people->name . " " . $person->people->surname;
 
-        return redirect()->route('scientific.edit',$id);
+        session()->flash('message','Edytowano sekcje naukową ' . $PersonData);
+        return redirect()->route('people.edit');
     }
 
     public function destroy($id)
@@ -71,7 +75,8 @@ class ScientificController extends Controller
             $person = Scientific::where('people_id',$id)->first();
             if ($person != null) {
                 $person->delete();
-                session()->flash('message','usunięto sekcje naukową');
+                $PersonData = $person->people->title . " " . $person->people->name . " " . $person->people->surname;
+                session()->flash('message','Usunięto sekcje naukową ' . $PersonData);
                 return redirect()->route('people.edit');
             }
         } catch (Exception $e) {

@@ -33,7 +33,9 @@ class DidacticController extends Controller
         $didactic->people_id = $id;
         $didactic->save();
 
-        return redirect('pracownicy/edit');
+        $PersonData = $didactic->people->title . " " . $didactic->people->name . " " . $didactic->people->surname;
+        session()->flash('message','Utworzono sekcje dydaktyczną ' . $PersonData);
+        return redirect()->route('people.edit');
     }
 
     public function show($id)
@@ -60,13 +62,16 @@ class DidacticController extends Controller
         $person->url = $request['url'];
         $person->save();
 
-        return redirect()->route('didactic.edit',$id);
+        $PersonData = $person->people->title . " " . $person->people->name . " " . $person->people->surname;
+        session()->flash('message','Edytowano sekcje dydaktyczną ' . $PersonData);
+        return redirect()->route('people.edit');
     }
 
     public function destroy($id)
     {
         $person = Didactic::where('people_id',$id)->first();
-        session()->flash('message','usunięto sekcje dydaktyczną');
+        $PersonData = $person->people->title . " " . $person->people->name . " " . $person->people->surname;
+        session()->flash('message','Usunięto sekcje dydaktyczną ' . $PersonData);
         $person->delete();
 
         return redirect()->route('people.edit');
