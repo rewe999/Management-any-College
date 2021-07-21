@@ -13,7 +13,7 @@
             @method('PUT')
             <div class="mb-3">
                 <label for="title" class="form-label">Dane</label>
-                <input type="text" class="form-control" id="title" placeholder="Dane" name="data" value="{{$person->data}}">
+                <textarea type="text" class="form-control" id="title" placeholder="Dane" name="data">{{$person->data}}</textarea>
             </div>
             <div class="mb-3">
                 <label for="title" class="form-label">Url</label>
@@ -51,4 +51,12 @@
         </div>
     </div>
     </div>
+@endsection
+
+@section('javascript')
+    ClassicEditor
+    .create( document.querySelector( '#title' ) )
+    .catch( error => {
+    console.error( error );
+    } );
 @endsection

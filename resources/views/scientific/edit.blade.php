@@ -13,7 +13,7 @@
             @method('PUT')
             <div class="mb-3">
                 <label for="title" class="form-label">Dane</label>
-                <input type="text" class="form-control" id="title" placeholder="Dane" name="data" value="{{$person->data}}">
+                <textarea type="text" class="form-control" id="title" placeholder="Dane" name="data">{{$person->data}}</textarea>
             </div>
             <div class="text-center pb-2">
                 <button type="submit" class="btn btn-primary text-center d-inline">EDYTUJ</button>
@@ -49,6 +49,12 @@
 @endsection
 
 @section('javascript')
+    ClassicEditor
+    .create( document.querySelector( '#title' ) )
+    .catch( error => {
+    console.error( error );
+    } );
+
     const deleteUrl = "{{ url('pracownicy/naukowa') }}/";
     const confirmDelete = "Czy na pewno chcesz usunąć ?";
 @endsection

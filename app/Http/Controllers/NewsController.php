@@ -40,7 +40,7 @@ class NewsController extends Controller
     public function show($id)
     {
         $news = News::findOrFail($id);
-        return view('news.show',['news'=>$news]);
+        return view('news.show',['new'=>$news]);
     }
 
     public function edit($id)
