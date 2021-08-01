@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/contact/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/email/email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/email/toAdminEmail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/didactic/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/didactic/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/didactic/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/didactic/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/didactic/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/didactic/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/organizational/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/organizational/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/organizational/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/organizational/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/organizational/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/organizational/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/scientific/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scientific/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/scientific/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scientific/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/scientific/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scientific/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +255,9 @@
       <workItem from="1626184210780" duration="2445000" />
       <workItem from="1626688068213" duration="3494000" />
       <workItem from="1626773594174" duration="4482000" />
-      <workItem from="1626861425701" duration="1446000" />
+      <workItem from="1626861425701" duration="1893000" />
+      <workItem from="1627746044161" duration="1376000" />
+      <workItem from="1627806969457" duration="2924000" />
     </task>
     <servers />
   </component>

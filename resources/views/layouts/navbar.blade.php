@@ -15,7 +15,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="{{route('peoples.index')}}"> Pracownicy uczelni</a></li>
                         <li><a class="dropdown-item" href="{{route('print')}}"> Druki </a></li>
-                        <li><a class="dropdown-item" href="#"> Kontakt </a></li>
+                        <li><a class="dropdown-item" href="{{route('contact')}}"> Kontakt </a></li>
                     </ul>
                 </li>
 

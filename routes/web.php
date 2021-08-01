@@ -82,6 +82,9 @@ Route::get('aktualnosci', 'NewsController@index')->name('news');
 Route::get('aktualnosci/{id}', 'NewsController@show')->name('news.show');
 Route::get('druki', 'FormController@index')->name('print');
 
+Route::get('kontakt', 'ContactController@index')->name('contact');
+Route::post('kontakt', 'ContactController@send')->name('contact.send');
+
 //Auth::routes();
 
 // Authentication Routes...
