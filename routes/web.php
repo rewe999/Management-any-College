@@ -22,15 +22,12 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth'])->group(function (){
-    Route::get('/home', function (){
-        return view('admin.dashboard');
-    })->name('home');
+    Route::get('/home', 'AdminController@dashboard')->name('home');
 
     Route::delete('zalacznik/usun/{id}', 'AttachmentController@destroy')->name('attachment.destroy');
 
     Route::get('aktualnosci/dodaj', 'NewsController@create')->name('news.add');
     Route::post('aktualnosci/dodaj', 'NewsController@store')->name('news.store');
-//    Route::get('aktualnosci/edit', 'NewsController@show')->name('news.show');
     Route::get('aktualnosci/edit', 'NewsController@showNews')->name('news.edit');
     Route::get('aktualnosci/edit/{id}', 'NewsController@edit')->name('news.edit.id');
     Route::put('aktualnosci/aktualizuj/{id}', 'NewsController@update')->name('news.update');

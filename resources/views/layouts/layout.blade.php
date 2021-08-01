@@ -24,7 +24,7 @@
 <body>
 @include('layouts.navbar')
 @include('sweetalert::alert')
-<div class="">
+<div class="backgroundLayout">
     @yield('content')
 </div>
 @include('layouts.footer')
@@ -40,5 +40,11 @@
 <style>
     .mt-5 {
         min-height: 28.4vh;
+    }
+
+    .backgroundLayout{
+        background-image: url("https://img.huffingtonpost.com/asset/5b476ec01900002a00c65851.jpeg?ops=1200_630");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 </style>

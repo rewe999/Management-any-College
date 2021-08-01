@@ -1,200 +1,148 @@
 @extends('layouts.layout')
 @section('title','Pracownicy Uczelni')
 @section('content')
-    {{--    <section id="team" class="pb-5">--}}
-    {{--        <div class="container">--}}
-    {{--            <h1 class="text-center text-white bg-dar">POZNAJ NASZYCH PRACOWNIKÓW UCZELNI</h1>--}}
-    {{--            <div class="row">--}}
-    {{--                <!-- Team member -->--}}
-    {{--                @foreach($peoples as $people)--}}
-    {{--                    <div class="col-xs-12 col-sm-6 col-md-4">--}}
-    {{--                        <div class="image-flip">--}}
-    {{--                            <div class="mainflip">--}}
-    {{--                                <div class="frontside">--}}
-    {{--                                    <div class="card">--}}
-    {{--                                        <div class="card-body text-center">--}}
-    {{--                                            @if($people->avatar)--}}
-    {{--                                                <p><img class="img-fluid"--}}
-    {{--                                                        src="{{asset('storage')}}/{{$people->avatar}}"--}}
-    {{--                                                        alt="card image"></p>--}}
-    {{--                                             @else--}}
-    {{--                                                <p><img class="img-fluid"--}}
-    {{--                                                        src="https://picsum.photos/200/300?random={{$people->id}}"--}}
-    {{--                                                        alt="card image"></p>--}}
-    {{--                                            @endif--}}
-    {{--                                            <h4 class="card-title">{{$people->title}} {{$people->name }} {{ $people->surname }}</h4>--}}
-    {{--                                            <p class="card-text">{{$people->section}}</p>--}}
-    {{--                                        </div>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                                <div class="backside">--}}
-    {{--                                    <div class="card">--}}
-    {{--                                        <div class="card-body text-center mt-4">--}}
-    {{--                                            <h4 class="card-title">Witam!</h4>--}}
-    {{--                                            <p>Nazywam się {{$people->name }} {{ $people->surname }} mam {{ 2021 - substr($people->birth_date, 0, 4) }} lat/a i moje zainteresowania to:</p>--}}
-    {{--                                            @foreach($people->didactic as $did)--}}
-    {{--                                                <ul class="card-text">--}}
-    {{--                                                    <li> {{$did->data}} </li>--}}
-    {{--                                                </ul>--}}
-    {{--                                            @endforeach--}}
-    {{--                                        </div>--}}
-    {{--                                        <button type="button" class="btn btn-outline-info"><a href=" {{route('peoples.show',$people->id)}}"> Zobacz więcej o mnie </a></button>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                    <!-- ./Team member -->--}}
-    {{--                @endforeach--}}
-
-    {{--                <div class="container">--}}
-    {{--                    <div class="row">--}}
-    {{--                        <div class="m-auto">{{ $peoples->links() }}</div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
-    <div id="team">
-        <div class="container">
-            <div class="row row-cols-2 row-cols-md-4 row-cols-sm-3 row-cols-xl-5 g-4 pt-3">
-                @foreach($peoples as $people)
-                    <div class="col pb-4">
-                        <div class="card">
-                            @if($people->avatar)
-                                <img src="{{asset('storage')}}/{{$people->avatar}}"
-                                     class="img-fluid rounded mx-auto d-block" alt="image">
-                            @else
-                                <img src="https://picsum.photos/200/300?random={{$people->id}}"
-                                     class="img-fluid rounded mx-auto d-block" alt="image">
-                            @endif
-
-                            <div class="card-body">
-                                <h5 class="card-title">{{$people->title}} {{$people->name }} {{ $people->surname }}</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <a href="{{route('peoples.show',$people->id)}}" class="btn btn-primary">Więcej o
-                                    pracowniku</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+<div class="team-grid">
+    <div class="container">
+        <div class="intro fs-1">
+            <h2 class="text-xl-center fs-1 textColor">Poznaj naszych Pracowników!</h2>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="m-auto">{{ $peoples->links() }}</div>
+
+            <div class="row people d-flex justify-content-center">
+        @foreach($peoples as $people)
+                    <a href="{{route('peoples.show',$people->id)}}">
+                <div class="col-md-4 col-lg-3 item">
+                    <div class="box">
+                        @if($people->avatar)
+                            <img src="{{asset('storage')}}/{{$people->avatar}}"
+                                 class="img-fluid rounded mx-auto d-block" alt="image">
+                        @else
+                            <img src="https://picsum.photos/200/300?random={{$people->id}}"
+                                 class="img-fluid rounded mx-auto d-block" alt="image">
+                        @endif
+
+                        <div class="cover">
+                            <h3 class="name">{{$people->title}} {{$people->name }} {{ $people->surname }}</h3>
+                            <p class="title">{{$people->position}}</p>
+                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        </div>
+
+                    </div>
+                </div>
+                    </a>
+        @endforeach
             </div>
+    <div class="container">
+        <div class="row">
+            <div class="m-auto">{{ $peoples->links() }}</div>
         </div>
     </div>
+    </div>
+</div>
 @endsection
 
 <style>
-    .img-test {
-        /*width: 10rem;*/
-        /*height: 10rem;*/
-        border-radius: 50%;
-    }
-
-    .card-body {
-        min-height: 10rem;
-        max-height: 10rem;
-        overflow: hidden;
-        transition: all 1s ease;
-    }
-
-    .card-body:hover, .card-img-top:hover {
-        max-height: 20rem;
-        cursor: pointer;
-        transition: all 1s ease;
-    }
-
-    #team {
-        background-image: url("{{asset('assets/pwsz-photo.jpg')}}");
+    .team-grid {
+        background-image: url("{{asset('assets/pwsz-photo.jpg')}}") !important;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-    section {
-        padding: 60px 0;
+    p {
+        color: #fff
     }
 
-    section .section-title {
+    h2 {
+        font-weight: bold;
+        margin-bottom: 40px;
+        padding-top: 40px;
+        color: #fff
+    }
+
+    @media (max-width:767px) {
+        h2 {
+            margin-bottom: 25px;
+            padding-top: 25px;
+            font-size: 24px
+        }
+    }
+
+    .intro {
+        font-size: 16px;
+        max-width: 500px;
+        margin: 0 auto
+    }
+
+    .intro p {
+        margin-bottom: 0
+    }
+
+    .people {
+        padding: 50px 0;
+        cursor: pointer
+    }
+
+    .item {
+        margin-bottom: 30px
+    }
+
+    .item .box {
         text-align: center;
-        color: #007b5e;
-        margin-bottom: 50px;
-        text-transform: uppercase;
-    }
-
-    #team .card {
-        border: none;
-        background: #ffffff;
-    }
-
-    .image-flip:hover .backside,
-    .image-flip.hover .backside {
-        transform: rotateY(0deg);
-        border-radius: .25rem;
-        width: 20rem;
-    }
-
-    .image-flip:hover .frontside,
-    .image-flip.hover .frontside {
-        transform: rotateY(180deg);
-    }
-
-    .mainflip {
-        transition: 1s;
-        transform-style: preserve-3d;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 280px;
         position: relative;
+        overflow: hidden
     }
 
-    .frontside {
-        position: relative;
-        z-index: 2;
-        margin-bottom: 30px;
-    }
-
-    .backside {
+    .item .cover {
         position: absolute;
         top: 0;
         left: 0;
-        background: white;
-        transform: rotateY(-180deg);
-        box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        width: 100%;
+        height: 100%;
+        background-color: rgba(7, 13, 62,0.5);
+        transition: opacity 0.15s ease-in;
+        opacity: 0;
+        padding-top: 80px;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15)
     }
 
-    .frontside,
-    .backside {
-        backface-visibility: hidden;
-        transition: 1s;
-        transform-style: preserve-3d;
+    .item:hover .cover {
+        opacity: 1
     }
 
-    .frontside .card,
-    .backside .card {
-        min-height: 312px;
-        width: 20rem;
+    .textColor {
+        font-size: 3rem;
     }
 
-    .backside .card a {
-        font-size: 18px;
-        color: #007b5e !important;
+    .item .name {
+        font-weight: bold;
+        margin-bottom: 8px
     }
 
-    .frontside .card .card-title,
-    .backside .card .card-title {
-        color: #007b5e !important;
+    .item .title {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #bbd8fb;
+        letter-spacing: 2px;
+        font-size: 13px;
+        margin-bottom: 20px
     }
 
-    .frontside .card .card-body img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
+    .social {
+        font-size: 18px
     }
 
-    ul > li {
-        text-align: left;
+    .social a {
+        color: inherit;
+        margin: 0 10px;
+        display: inline-block;
+        opacity: 0.7
+    }
+
+    .social a:hover {
+        opacity: 1
     }
 </style>
