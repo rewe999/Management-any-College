@@ -24,7 +24,7 @@ class ScientificRequest extends FormRequest
     public function rules()
     {
         return [
-            'data'=> 'required|string|min:4',
+            'data'=> 'required|string|min:4|max:500',
         ];
     }
 
@@ -32,6 +32,7 @@ class ScientificRequest extends FormRequest
     {
         return [
             'data.min' => 'Zbyt mało danych',
+            'data.max' => 'Zbyt dużo danych',
             'data.required' => 'Pole Dane jest wymagane',
         ];
     }

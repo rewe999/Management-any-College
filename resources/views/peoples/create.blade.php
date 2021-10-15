@@ -33,14 +33,22 @@
                 <input class="form-control" id="position" placeholder="Sekcja" name="position" value="{{old('position')}}">
             </div>
 
+            <label for="position" class="form-label">Płeć</label>
             <div class="mb-3">
-                <label for="gender" class="form-label">Płeć</label>
-                <input class="form-control" id="gender" placeholder="Płeć" name="gender" value="{{old('gender')}}">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="man" value="Mężczyzna" checked>
+                    <label class="form-check-label" for="man">Mężczyzna</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="woman" value="Kobieta">
+                    <label class="form-check-label" for="woman">Kobieta</label>
+                </div>
             </div>
+
 
             <div class="mb-3">
                 <label for="birth_date" class="form-label">Data urodzenia</label>
-                <input class="form-control" type="date" id="birth_date" name="birth_date">
+                <input class="form-control" type="date" id="birth_date" name="birth_date" value="{{ old('birth_date', date('Y-m-d')) }}">
             </div>
 
             <div class="mb-3">

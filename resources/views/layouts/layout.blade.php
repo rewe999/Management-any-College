@@ -16,6 +16,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="icon" href="{{ URL::asset('favicon.ico') }}" type="image/x-icon"/>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -24,7 +25,7 @@
 <body>
 @include('layouts.navbar')
 @include('sweetalert::alert')
-<div class="backgroundLayout">
+<div class="backgroundLayout {{\Illuminate\Support\Facades\Request::is('pracownicy') ? '' : 'pb-5 pt-5'}}" >
     @yield('content')
 </div>
 @include('layouts.footer')
@@ -43,7 +44,7 @@
     }
 
     .backgroundLayout{
-        background-image: url("https://img.huffingtonpost.com/asset/5b476ec01900002a00c65851.jpeg?ops=1200_630");
+        background-image: url("https://i.pinimg.com/736x/15/4c/24/154c2433488f117811d5f4f3943361df.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }

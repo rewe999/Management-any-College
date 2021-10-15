@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Mail\ContactEmail;
 use App\Mail\toAdminEmail;
 use Illuminate\Http\Request;
@@ -13,7 +14,7 @@ class ContactController extends Controller
         return view('contact.index');
     }
 
-    public function send(Request $request){
+    public function send(ContactRequest $request){
         session()->flash('message','Wiadomość email została wysłana');
         $email = $request['email'];
         $details = [

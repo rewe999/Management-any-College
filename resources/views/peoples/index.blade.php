@@ -4,7 +4,7 @@
 <div class="team-grid">
     <div class="container">
         <div class="intro fs-1">
-            <h2 class="text-xl-center fs-1 textColor">Poznaj naszych Pracowników!</h2>
+            <h2 class="text-xl-center fs-1 textColor pb-3 pt-5">Poznaj naszych Pracowników!</h2>
         </div>
 
             <div class="row people d-flex justify-content-center">
@@ -13,15 +13,15 @@
                 <div class="col-md-4 col-lg-3 item">
                     <div class="box">
                         @if($people->avatar)
-                            <img src="{{asset('storage')}}/{{$people->avatar}}"
-                                 class="img-fluid rounded mx-auto d-block" alt="image">
+                            <img src="{{$people->image}}"
+                                 class="img-fluid rounded mx-auto d-block avatarImage" alt="image">
                         @else
                             <img src="https://picsum.photos/200/300?random={{$people->id}}"
-                                 class="img-fluid rounded mx-auto d-block" alt="image">
+                                 class="img-fluid rounded mx-auto d-block avatarImage" alt="image">
                         @endif
 
                         <div class="cover">
-                            <h3 class="name">{{$people->title}} {{$people->name }} {{ $people->surname }}</h3>
+                            <h3 class="name">{{$people->fullName}}</h3>
                             <p class="title">{{$people->position}}</p>
                             <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                         </div>
@@ -38,13 +38,20 @@
     </div>
     </div>
 </div>
+
 @endsection
 
 <style>
+
     .team-grid {
-        background-image: url("{{asset('assets/pwsz-photo.jpg')}}") !important;
+        background-image: url("{{asset('assets/pwsz-img.jpg')}}");
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .avatarImage {
+        width: 5550px;
+        height: 450px;
     }
 
     p {
@@ -57,6 +64,12 @@
         padding-top: 40px;
         color: #fff
     }
+
+    .cover{
+        width: 550px;
+        height: 220px;
+    }
+
 
     @media (max-width:767px) {
         h2 {
@@ -119,7 +132,13 @@
 
     .item .name {
         font-weight: bold;
-        margin-bottom: 8px
+        margin-bottom: 8px;
+        color: #09b8a5;
+    }
+
+    .name:hover {
+        color: #6a0aac;
+        transition: 0.2s linear;
     }
 
     .item .title {

@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('title','Aktualności')
 @section('content')
-    <div class="container">
+    <div class="container content-size">
 
         <h1 class="text-center mx-auto">AKTUALNOŚCI</h1>
 
@@ -12,3 +12,9 @@
             @endforeach
     </div>
 @endsection
+
+<style>
+    .content-size {
+        min-height: 29.6vh;
+    }
+</style>

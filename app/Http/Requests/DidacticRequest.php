@@ -24,7 +24,7 @@ class DidacticRequest extends FormRequest
     public function rules()
     {
         return [
-            'data'=> 'required|string|min:4',
+            'data'=> 'required|string|min:4|max:500',
             'url'=>'required|string|min:5',
         ];
     }
@@ -33,6 +33,7 @@ class DidacticRequest extends FormRequest
     {
         return [
             'data.min' => 'Zbyt mało danych',
+            'data.max' => 'Zbyt dużo danych',
             'data.required' => 'Pole Dane jest wymagane',
             'url.min' => 'Zbyt krótki url',
             'url.required' => 'Url jest wymagane',

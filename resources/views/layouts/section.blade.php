@@ -7,7 +7,7 @@
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="true"
-                           href="{{route('peoples.show',$person[0]->people->id)}}">{{$person[0]->people->title}} {{$person[0]->people->name}} {{$person[0]->people->surname}}</a>
+                           href="{{route('peoples.show',$person[0]->people->id)}}">{{$person[0]->people->fullName}}</a>
                     </li>
                     @if(count($person[0]->people->didactic) > 0)
                         <li class="nav-item">
@@ -36,7 +36,7 @@
                                 <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
                                     @if($person[0]->people->avatar)
                                         <p><img class="img-fluid"
-                                                src="{{asset('storage')}}/{{$person[0]->people->avatar}}"
+                                                src="{{$person[0]->people->image}}"
                                                 alt="card image"></p>
                                     @else
                                         <p><img class="img-fluid"

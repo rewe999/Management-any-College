@@ -16,16 +16,15 @@
                         <h6>{{date("H:i")}}</h6>
                     </div>
                     <div class="d-flex flex-column temp mt-5 mb-3">
-                        <h1 class="mb-0 font-weight-bold" id="heading"> {{(float)( json_encode($weather['main']['temp'])) - 273.15}}° C </h1>
+                        <h1 class="mb-0 font-weight-bold" id="heading"> {{(float)json_encode($weather['main']['temp']) - 273.15}}° C </h1>
                             <span class="small grey">{{ $weather['weather'][0]['main'] }}</span>
                     </div>
                     <div class="d-flex">
                         <div class="temp-details flex-grow-1">
                             <p class="my-1"> <i class="fas fa-wind"> </i> <span> {{(int) (json_encode($weather['wind']['speed']) * 3.6) }} km/h </span> </p>
-                            <p class="my-1"> <i class="fa fa-tint mr-2" aria-hidden="true"></i> <span> 84% </span> </p>
-                            <p class="my-1"> <i class="far fa-sun"></i> <span> 0.2h </span> </p>
+                            <p class="my-1"> <i class="fas fa-tint mr-2" aria-hidden="true"></i> <span> {{(int)json_encode($weather['main']['humidity'])}} % </span> </p>
                         </div>
-                        <div> <img src="https://images-na.ssl-images-amazon.com/images/I/41hzbXlmykL.png" width="100px"> </div>
+                        <div> <img src="http://openweathermap.org/img/wn/{{ $weather['weather'][0]['icon'] }}.png" width="100px"> </div>
                     </div>
                 </div>
             </div>

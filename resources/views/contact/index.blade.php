@@ -9,9 +9,17 @@
         @endif
     </div>
 
+    @if($errors->first())
+        <div class="container">
+            <div class="alert alert-danger" role="alert">
+                <p class="badge-danger"><h6>{{$errors->first()}}</h6></p>
+            </div>
+        </div>
+    @endif
+
     <div class="container d-flex justify-content-center cont">
         <div class="row my-2 mx-2">
-            <div class="col-md-6"> <img class="contactImage" src="https://png.pngtree.com/png-vector/20190725/ourlarge/pngtree-message-icon-design-vector-png-image_1587713.jpg" alt="IMG"> </div>
+            <div class="col-md-6"> <img class="contactImage" src="{{asset('assets/contact.jpg')}}" alt="IMG"> </div>
             <div class="col-md-6">
                 <h2 class="form-title">Skontaktuj się z nami</h2>
                 <p class="justify text-muted">Masz pytanie lub chciałbyś przekazać nam swoją opinię? Wypełnij poniższy formularz, aby skontaktować się z naszym zespołem.</p>

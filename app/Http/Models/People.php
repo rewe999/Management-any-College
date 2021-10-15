@@ -31,4 +31,13 @@ class People extends Model
     {
         return $this->hasMany(Scientific::class);
     }
+
+    public function getFullNameAttribute()
+    {
+        return "{$this->title} {$this->name} {$this->surname}";
+    }
+
+    public function getImageAttribute(){
+        return asset('storage')."/$this->avatar";
+    }
 }

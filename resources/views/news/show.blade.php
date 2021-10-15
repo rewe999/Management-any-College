@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('title','Aktualności')
 @section('content')
-    <div class="container">
+    <div class="container content-size">
     <div class="row text-center title">{{$new->title}}</div>
         <div class="row pt-3">
             <tr>
@@ -24,5 +24,8 @@
         align-items: center;
         align-content: stretch;
         background-color: #aec62c;
+    }
+    .content-size {
+        min-height: 29.6vh;
     }
 </style>

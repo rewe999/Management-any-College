@@ -1,8 +1,7 @@
 @extends('layouts.section')
 
 @section('section-main')
-    <h3 class="">Witam Serdecznie!</h3>
-    <p>Sekcja organizacyjna</p>
-    <p>dane: <b>{!! $person[0]->people->organizational[0]->data !!}</b></p>
+    <h1 class="mb-4">Sekcja organizacyjna</h1>
+    <b>{!! $person[0]->people->organizational[0]->data !!}</b>
 @endsection
 

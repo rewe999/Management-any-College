@@ -25,6 +25,8 @@ class PeopleController extends Controller
     public function store(PersonRequest $request)
     {
         $person = new People($request->validated());
+//        if ($request['man']) $person->gender = $request['man'];
+//        else $person->gender = $request['woman'];
         $person->gender = $request['gender'];
         $person->birth_date = $request['birth_date'];
         if ($request->hasFile('avatar')){
