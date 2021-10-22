@@ -47,7 +47,7 @@
             <label for="position" class="form-label">Płeć</label>
             <div class="mb-3">
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" id="man" value="Mężczyzna" @if($person->gender == "Mężczyzna") checked @endif>
+                    <input class="form-check-input" type="radio" name="gender" id="man" value="Mężczyzna" @if($person->gender == "Mężczyzna") checked @endif checked>
                     <label class="form-check-label" for="man">Mężczyzna</label>
                 </div>
                 <div class="form-check form-check-inline">

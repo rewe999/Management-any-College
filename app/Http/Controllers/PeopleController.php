@@ -6,6 +6,7 @@ use App\Http\Requests\PersonRequest;
 use App\People;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PeopleController extends Controller
 {
@@ -25,8 +26,6 @@ class PeopleController extends Controller
     public function store(PersonRequest $request)
     {
         $person = new People($request->validated());
-//        if ($request['man']) $person->gender = $request['man'];
-//        else $person->gender = $request['woman'];
         $person->gender = $request['gender'];
         $person->birth_date = $request['birth_date'];
         if ($request->hasFile('avatar')){
@@ -59,8 +58,12 @@ class PeopleController extends Controller
     public function update(PersonRequest $request,int $id)
     {
         $person = People::findOrFail($id);
+        $oldPersonImage = 'public/'.$person->avatar;
         $person->fill($request->validated());
         if ($request->hasFile('avatar')){
+            if (Storage::get($oldPersonImage)){
+                Storage::delete($oldPersonImage);
+            }
             $path = $request['avatar']->store('avatars','public');
             $person->avatar = $path;
         }
