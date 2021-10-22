@@ -10,6 +10,15 @@
         <h1 class="text-center">Edytuj Pracownika</h1>
         @if($person->avatar)
             <img src="{{asset('storage/'.$person->avatar)}}" class="mx-auto d-block" alt="img">
+        <div class="d-flex justify-content-center mt-4">
+            <form action="{{route('people.destroy.avatar',$person->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger">
+                    Usuń avatara
+                </button>
+            </form>
+        </div>
         @endif
 
         @if($errors)

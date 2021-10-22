@@ -88,4 +88,19 @@ class PeopleController extends Controller
             ])->setStatusCode(500);
         }
     }
+
+    public function destroyAvatar($id){
+        $person = People::findOrFail($id);
+        $avatar = $person->avatar;
+        $oldPersonImage = 'public/'.$avatar;
+        if ($avatar){
+            if (Storage::get($oldPersonImage)){
+                Storage::delete($oldPersonImage);
+            }
+            $person->avatar = null;
+            $person->save();
+        }
+
+        return redirect()->back()->with('message',"Avatar pracownika {$person->name} został usunięty");
+    }
 }
