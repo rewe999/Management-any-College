@@ -1,8 +1,8 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home')}}">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center mb-3" href="{{route('home')}}">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+            <img src="{{asset('assets/pwsz-mini-transparent-logo.png')}}" alt="logo" height="70vh" width="70vw">
         </div>
         <div class="sidebar-brand-text mx-3">Admin Panel</div>
     </a>

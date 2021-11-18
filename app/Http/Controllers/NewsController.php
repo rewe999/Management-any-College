@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\NewsRequest;
 use App\News;
 use Carbon\Carbon;
 use Exception;
@@ -26,7 +27,7 @@ class NewsController extends Controller
         return view('news.showNews',['news' => $news]);
     }
 
-    public function store(Request $request)
+    public function store(NewsRequest $request)
     {
         $new = new News();
         $new->title = $request['title'];

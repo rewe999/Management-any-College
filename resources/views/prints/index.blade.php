@@ -6,17 +6,11 @@
             <h1 class="text-center mx-auto pb-5">DRUKI</h1>
             <table class="table">
                 <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">tytuł</th>
-                    <th scope="col">załącznik</th>
-                </tr>
                 </thead>
                 <tbody>
                     @foreach($forms as $form)
                         <tr>
-                            <th scope="row">{{$form->id}}</th>
-                            <td>{{$form->title}}</td>
+                            <td><b>{{$form->title}}</b></td>
                             <td>
                                 <ul>
                                     @foreach($form->attachments as $fo)
@@ -30,5 +24,4 @@
             </table>
         </div>
     </div>
-
 @endsection

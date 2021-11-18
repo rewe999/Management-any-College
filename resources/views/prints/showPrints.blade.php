@@ -22,7 +22,7 @@
                     <tr>
                         <th scope="row">{{$print->id}}</th>
                         <td>{{$print->title}}</td>
-                        <td>{{$print->description}}</td>
+                        <td>{{ Str::limit($print->description,20) }}</td>
                         <td class="d-flex">
                             <a href="{{route('form.edit.id',$print->id)}}"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button></a>
                             <button class="btn btn-danger btn-sm delete" data-id="{{ $print->id }}" data-title={{ $print->title }}><i class="fas fa-trash"></i></button>
