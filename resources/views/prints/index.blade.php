@@ -9,7 +9,6 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">tytuł</th>
-                    <th scope="col">opis</th>
                     <th scope="col">załącznik</th>
                 </tr>
                 </thead>
@@ -18,7 +17,6 @@
                         <tr>
                             <th scope="row">{{$form->id}}</th>
                             <td>{{$form->title}}</td>
-                            <td>{{$form->description}}</td>
                             <td>
                                 <ul>
                                     @foreach($form->attachments as $fo)
