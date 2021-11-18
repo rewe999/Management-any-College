@@ -23,8 +23,13 @@ class ContactController extends Controller
             'message' => $request['message']
         ];
 
-        Mail::to($email)->send(new ContactEmail($details));
-        Mail::to(env('MAIL_USERNAME'))->send(new toAdminEmail($details));
-        return view('contact.index');
+        try {
+            Mail::to($email)->send(new ContactEmail($details));
+            Mail::to(env('MAIL_USERNAME'))->send(new toAdminEmail($details));
+            return view('contact.index');
+        }catch (\Exception $e) {
+            return view('contact.index')->with('message',"Problem podczas wysyłania emaila");
+        }
+
     }
 }

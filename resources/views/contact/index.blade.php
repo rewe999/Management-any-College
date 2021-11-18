@@ -19,10 +19,10 @@
 
     <div class="container d-flex justify-content-center cont">
         <div class="row my-2 mx-2">
-            <div class="col-md-6"> <img class="contactImage" src="{{asset('assets/contact.jpg')}}" alt="IMG"> </div>
-            <div class="col-md-6">
+            <div class="col-sm-6"> <img class="contactImage" src="{{asset('assets/contact.jpg')}}" alt="IMG"> </div>
+            <div class="col-sm-6">
                 <h2 class="form-title">Skontaktuj się z nami</h2>
-                <p class="justify text-muted">Masz pytanie lub chciałbyś przekazać nam swoją opinię? Wypełnij poniższy formularz, aby skontaktować się z naszym zespołem.</p>
+                <p class="justify text-muted">Masz pytanie lub chciałbyś przekazać nam swoją opinię? Wypełnij poniższy formularz, aby skontaktować się z naszym administratorem.</p>
 
                 <form method="POST" action="{{route('contact.send')}}" enctype="multipart/form-data">
                     <div class="form-group pt-2 pl-1"> <label for="exampleInputName">Twoje imię</label> <input type="text" class="form-control" id="exampleInputName" name="name"> </div>
@@ -50,18 +50,25 @@
         padding: 20px 20px 20px 20px;
         box-sizing: border-box;
         border-radius: 20px;
-        width: 945px
+        width: 945px;
     }
 
     .contactImage {
-        padding-top: 110px;
-        padding-left: 50px;
-        width: 85%;
-        height: 80%
+        width: 30vw;
+        height: 60vh;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 557px) {
+        .contactImage {
+            width: 70vw;
+            height: 60vh;
+            text-align: center;
+        }
     }
 
     .sendButton {
-        width: 100%;
+        min-width: 100%;
         font-size: 12px;
         margin-top: 10px;
         background-color: rgba(56, 147, 243, 0.67);

@@ -8,18 +8,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        INSTYTUT
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{{route('peoples.index')}}"> Pracownicy uczelni</a></li>
-                        <li><a class="dropdown-item" href="{{route('print')}}"> Druki </a></li>
-                        <li><a class="dropdown-item" href="{{route('contact')}}"> Kontakt </a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item dropdown"> <a class="nav-link active" href="{{route('news')}}">AKTUALNOŚCI</a> </li>
+                <li class="nav-item dropdown"> <a class="nav-link" href="{{route('peoples.index')}}"> PRACOWNICY UCZELNI</a> </li>
+                <li class="nav-item dropdown"> <a class="nav-link" href="{{route('print')}}"> DRUKI </a> </li>
+                <li class="nav-item dropdown"> <a class="nav-link" href="{{route('contact')}}"> KONTAKT </a> </li>
+                <li class="nav-item dropdown"> <a class="nav-link" href="{{route('news')}}">AKTUALNOŚCI</a> </li>
 
                 @auth
                     <li class="nav-item dropdown">
@@ -55,6 +47,11 @@
     .logo {
         width: 5rem;
         height: 5rem;
+    }
+
+    .nav-link:hover {
+        text-decoration: underline;
+        transition: width 2s;
     }
 
 </style>

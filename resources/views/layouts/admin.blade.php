@@ -55,7 +55,7 @@
         </div>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePrints"
+            <a class="nav-link collapsed collapsePrints" href="#" data-toggle="collapse" data-target="#collapsePrints"
                aria-expanded="true" aria-controls="collapsePrints">
                 <i class="fas fa-print"></i>
                 <span>Druki</span>
@@ -143,3 +143,26 @@
 @yield('js-files')
 </body>
 </html>
+
+<script type="text/javascript">
+    (function() {
+        $(".collapsePrints").on(click,function(e) {
+            $(".collapsePrints").toggleClass('collapsed')
+        })
+
+        $("collapsePrint").on('click', function(e) {
+            $(".collapsePrints").toggleClass('collapsed')
+        });
+
+        $("#collapsePrints").on('click', function(e) {
+            if ($("#collapsePrints").hasClass("show")) {
+                console.log("ma")
+                $('#collapsePrints').removeClass('show');
+            } else {
+                console.log("nie ma")
+                $("#collapsePrints").addClass("show");
+            }
+        });
+    })();
+
+</script>
