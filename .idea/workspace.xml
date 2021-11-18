@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/prints/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prints/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +267,7 @@
       <workItem from="1636291115787" duration="22000" />
       <workItem from="1636472292281" duration="4594000" />
       <workItem from="1637082149365" duration="34000" />
-      <workItem from="1637251737681" duration="1457000" />
+      <workItem from="1637251737681" duration="2402000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -278,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637251834893</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="change js admin files">
+      <created>1637253593116</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637253593116</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +303,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix admin panel and contact form" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix admin panel and contact form" />
+    <MESSAGE value="change js admin files" />
+    <option name="LAST_COMMIT_MESSAGE" value="change js admin files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
