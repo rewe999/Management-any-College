@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Models\People;
 use App\Http\Requests\PersonRequest;
-use App\People;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;

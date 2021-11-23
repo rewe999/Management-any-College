@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Models\Organizational;
+use App\Http\Models\People;
 use App\Http\Requests\OrganizationalRequest;
-use App\Models\Organizational;
-use App\People;
 use Illuminate\Http\Request;
 
 class OrganizationalController extends Controller

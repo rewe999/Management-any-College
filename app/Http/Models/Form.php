@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Http\Models;
 
 use App\Http\Models\FormAttachments;
 use Illuminate\Database\Eloquent\Model;

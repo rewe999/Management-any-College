@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Models\People;
+use App\Http\Models\Scientific;
 use App\Http\Requests\ScientificRequest;
-use App\Models\Scientific;
-use App\People;
 use Exception;
 use Illuminate\Http\Request;
 

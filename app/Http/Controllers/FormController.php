@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Form;
+use App\Http\Models\Form;
 use App\Http\Models\FormAttachments;
 use App\Http\Requests\FormsRequest;
 use Exception;

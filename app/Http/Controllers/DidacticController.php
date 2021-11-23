@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Models\Didactic;
+use App\Http\Models\People;
 use App\Http\Requests\DidacticRequest;
-use App\Models\Didactic;
-use App\People;
 
 class DidacticController extends Controller
 {

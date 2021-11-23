@@ -4,7 +4,7 @@
 namespace App\Http\Models;
 
 
-use App\Form;
+use App\Http\Form;
 use Illuminate\Database\Eloquent\Model;
 
 class FormAttachments extends Model

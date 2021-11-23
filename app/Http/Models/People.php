@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Http\Models;
 
-use App\Models\Didactic;
-use App\Models\Organizational;
-use App\Models\Scientific;
+use App\Http\Models\Didactic;
+use App\Http\Models\Organizational;
+use App\Http\Models\Scientific;
 use Illuminate\Database\Eloquent\Model;
 
 class People extends Model

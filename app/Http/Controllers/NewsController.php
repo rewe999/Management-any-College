@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Models\News;
 use App\Http\Requests\NewsRequest;
-use App\News;
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
