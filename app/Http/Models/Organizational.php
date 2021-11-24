@@ -2,7 +2,6 @@
 
 namespace App\Http\Models;
 
-use App\People;
 use Illuminate\Database\Eloquent\Model;
 
 class Organizational extends Model

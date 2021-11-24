@@ -2,9 +2,6 @@
 
 namespace App\Http\Models;
 
-use App\Http\Models\Didactic;
-use App\Http\Models\Organizational;
-use App\Http\Models\Scientific;
 use Illuminate\Database\Eloquent\Model;
 
 class People extends Model

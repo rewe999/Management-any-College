@@ -16,7 +16,7 @@
                         <h6>{{date("H:i")}}</h6>
                     </div>
                     <div class="d-flex flex-column temp mt-5 mb-3">
-                        <h1 class="mb-0 font-weight-bold" id="heading"> {{(float)json_encode($weather['main']['temp']) - 273.15}}° C </h1>
+                        <h1 class="mb-0 font-weight-bold" id="heading"> {{round((json_encode($weather['main']['temp']) - 273.15),2)}}° C </h1>
                             <span class="small grey">{{ $weather['weather'][0]['main'] }}</span>
                     </div>
                     <div class="d-flex">

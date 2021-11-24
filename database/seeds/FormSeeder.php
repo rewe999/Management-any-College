@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Models\People;
+use App\Http\Models\Form;
 use Illuminate\Database\Seeder;
 
-class PersonSeeder extends Seeder
+class FormSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class PersonSeeder extends Seeder
      */
     public function run()
     {
-        factory(People::class,10)->create();
+        factory(Form::class,10)->create();
     }
 }

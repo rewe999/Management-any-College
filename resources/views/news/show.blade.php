@@ -2,15 +2,15 @@
 @section('title','Aktualności')
 @section('content')
     <div class="container content-size">
-    <div class="title text-center test">{{$new->title}}</div>
+    <div class="title text-center textWord">{{$new->title}}</div>
             <div class="text-wrap test">
-               <p class="">{!! $new->content !!}</p>
+               <p class="pt-5 font-weight-bold">{!! $new->content !!}</p>
             </div>
     </div>
 @endsection
 
 <style>
-    .test {
+    .textWord {
         max-width: 100vw;
         word-wrap: break-word;
     }
