@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/factories/FormFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/NewFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/FormSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/NewSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/AdminFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/DidacticsFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/OrganizationalsFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ScientificFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/DidacticsSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/OrganizationalsSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ScientificSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Models/Didactic.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/Didactic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Models/FormAttachments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/FormAttachments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Models/Organizational.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/Organizational.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Models/People.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/People.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/PersonFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PersonFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PersonSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PersonSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,15 +160,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/factories" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Programowanie\Laravel\PD-pwsz\database\seeds" />
       <recent name="E:\Programowanie\Laravel\PD-pwsz\database\factories" />
+      <recent name="E:\Programowanie\Laravel\PD-pwsz\database\seeds" />
       <recent name="E:\Programowanie\Laravel\PD-pwsz\public\css" />
       <recent name="E:\Programowanie\Laravel\PD-pwsz\resources\views\organizational" />
       <recent name="E:\Programowanie\Laravel\PD-pwsz\resources\views\scientific" />
@@ -181,7 +179,11 @@
       <recent name="E:\Programowanie\Laravel\PD-pwsz\public\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.watch-poll">
+  <component name="RunManager" selected="PHPUnit.PersonTest.testExample">
+    <configuration name="PersonTest.testExample" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\PersonTest" file="$PROJECT_DIR$/tests/Feature/PersonTest.php" method="testExample" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -208,6 +210,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.PersonTest.testExample" />
         <item itemvalue="npm.watch-poll" />
         <item itemvalue="npm.watch" />
       </list>
@@ -282,6 +285,7 @@
       <workItem from="1637251737681" duration="2402000" />
       <workItem from="1637511058535" duration="17000" />
       <workItem from="1637682809201" duration="472000" />
+      <workItem from="1637853575021" duration="2379000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -304,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637257866400</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change namespaces, fix view">
+      <created>1637772854643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637772854643</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +337,8 @@
     <MESSAGE value="fix admin panel and contact form" />
     <MESSAGE value="change js admin files" />
     <MESSAGE value="add request, change migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="add request, change migration" />
+    <MESSAGE value="change namespaces, fix view" />
+    <option name="LAST_COMMIT_MESSAGE" value="change namespaces, fix view" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

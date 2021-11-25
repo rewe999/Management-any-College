@@ -14,7 +14,7 @@
                     <div class="box">
                         @if($people->avatar)
                             <img src="{{$people->image}}"
-                                 class="img-fluid rounded mx-auto d-block avatarImage" alt="image">
+                                 class="img-fluid rounded avatarImage" alt="image">
                         @else
                             <img src="https://picsum.photos/200/300?random={{$people->id}}"
                                  class="img-fluid rounded mx-auto d-block avatarImage" alt="image">
@@ -50,8 +50,8 @@
     }
 
     .avatarImage {
-        width: 5550px;
-        height: 450px;
+        width: 550px;
+        height: 100%;
     }
 
     p {
@@ -114,7 +114,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(7, 13, 62,0.5);
+        background-color: rgba(11, 33, 138, 0.5);
         transition: opacity 0.15s ease-in;
         opacity: 0;
         padding-top: 80px;

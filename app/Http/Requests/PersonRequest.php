@@ -25,15 +25,15 @@ class PersonRequest extends FormRequest
     {
         return [
             'title' => 'required|string|min:2',
-            'name' => 'required|string|min:5',
-            'surname' => 'required|string|min:5',
-            'section' => 'required|string|min:5',
+            'name' => 'required|string|min:2',
+            'surname' => 'required|string|min:2',
+            'section' => 'required|string|min:3',
             'avatar' => "image:jpeg,png,jpg,svg|max:4096",
-            'position' => 'required|string|min:5',
+            'position' => 'required|string|min:3',
             'gender' => 'required|string|min:5',
             'birth_date' => 'required|string',
             'email' => 'required|string|min:5',
-            'url' => 'required|string|min:10'
+            'url' => 'required|string|min:6'
         ];
     }
 }
