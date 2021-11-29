@@ -25,7 +25,7 @@ class DidacticRequest extends FormRequest
     {
         return [
             'data'=> 'required|string|min:4|max:500',
-            'url'=>'required|string|min:5|max:50',
+            'url'=>'required|string|min:5|max:150',
         ];
     }
 

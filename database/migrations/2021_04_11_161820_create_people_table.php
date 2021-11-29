@@ -15,17 +15,17 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('name');
-            $table->string('surname');
-            $table->string('section');
-            $table->string('position');
-            $table->string('gender');
+            $table->string('title',10);
+            $table->string('name',30);
+            $table->string('surname',30);
+            $table->string('section',50);
+            $table->string('position',50);
+            $table->string('gender',30);
             $table->date('birth_date');
             $table->string('avatar')->nullable();
             $table->boolean('active')->default(true);
-            $table->string('email');
-            $table->string('url');
+            $table->string('email',50);
+            $table->string('url',150);
             $table->timestamps();
         });
     }

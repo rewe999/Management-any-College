@@ -15,7 +15,7 @@ class CreateScientificsTable extends Migration
     {
         Schema::create('scientifics', function (Blueprint $table) {
             $table->id();
-            $table->string('data');
+            $table->string('data',500);
             $table->unsignedBigInteger("people_id");
             $table->foreign("people_id")->references("id")->on("people")
                 ->onDelete("cascade");

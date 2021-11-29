@@ -15,8 +15,8 @@ class CreateDidacticsTable extends Migration
     {
         Schema::create('didactics', function (Blueprint $table) {
             $table->id();
-            $table->string('data');
-            $table->string('url');
+            $table->string('data',500);
+            $table->string('url',150);
             $table->unsignedBigInteger("people_id");
             $table->foreign("people_id")->references("id")->on("people")
                 ->onDelete("cascade");

@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/factories/FormAttachmentFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/FormAttachmentSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ContactRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ContactRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/DidacticRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/DidacticRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/FormsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/FormsRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/NewsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/NewsRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/peoples/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/peoples/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PersonFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PersonFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_11_161820_create_people_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_161820_create_people_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_11_164433_create_didactics_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_164433_create_didactics_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_21_112940_create_scientifics_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_21_112940_create_scientifics_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_21_113055_create_organizationals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_21_113055_create_organizationals_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_28_124727_create_news_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_28_124727_create_news_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_03_110556_create_forms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_03_110556_create_forms_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +161,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -285,7 +288,7 @@
       <workItem from="1637682809201" duration="472000" />
       <workItem from="1637853575021" duration="2906000" />
       <workItem from="1638017860646" duration="69000" />
-      <workItem from="1638210965727" duration="1771000" />
+      <workItem from="1638210965727" duration="2779000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -322,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637856273712</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="change login view , validate max variables in request">
+      <created>1638212775625</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1638212775625</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +356,8 @@
     <MESSAGE value="add request, change migration" />
     <MESSAGE value="change namespaces, fix view" />
     <MESSAGE value="add seeder and factories" />
-    <option name="LAST_COMMIT_MESSAGE" value="add seeder and factories" />
+    <MESSAGE value="change login view , validate max variables in request" />
+    <option name="LAST_COMMIT_MESSAGE" value="change login view , validate max variables in request" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

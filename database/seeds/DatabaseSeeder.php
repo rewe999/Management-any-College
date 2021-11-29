@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             PersonSeeder::class,
             FormSeeder::class,
+            FormAttachmentSeeder::class,
             NewSeeder::class,
             ScientificSeeder::class,
             DidacticsSeeder::class,

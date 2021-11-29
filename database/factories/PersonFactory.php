@@ -12,7 +12,6 @@ $factory->define(People::class, function (Faker $faker) {
         'surname' => $faker->name,
         'section' => $faker->randomElement(['wydział naukowy','programowanie','grafika']),
         'position' => $faker->randomElement(['wykładowca','nauczyciel','dziekan']),
-        'email' => $faker->unique()->safeEmail,
         'gender' => $faker->randomElement(['mężczyzna','kobieta']),
         'birth_date' => $faker->dateTimeBetween('-30 years','now'),
         'avatar' => null,
