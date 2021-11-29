@@ -50,7 +50,7 @@ class NewsController extends Controller
         return view('news.edit',['new'=>$new]);
     }
 
-    public function update(Request $request, $id)
+    public function update(NewsRequest $request, $id)
     {
         $new = News::findOrFail($id);
         $new->fill($request->all());

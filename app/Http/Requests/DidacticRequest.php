@@ -25,7 +25,7 @@ class DidacticRequest extends FormRequest
     {
         return [
             'data'=> 'required|string|min:4|max:500',
-            'url'=>'required|string|min:5',
+            'url'=>'required|string|min:5|max:50',
         ];
     }
 
@@ -36,6 +36,7 @@ class DidacticRequest extends FormRequest
             'data.max' => 'Zbyt dużo danych',
             'data.required' => 'Pole Dane jest wymagane',
             'url.min' => 'Zbyt krótki url',
+            'url.max' => 'Zbyt długi url',
             'url.required' => 'Url jest wymagane',
         ];
     }

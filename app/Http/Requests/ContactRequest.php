@@ -24,21 +24,21 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=> 'required|string|min:5',
-            'email'=>'required|string|email|min:5',
-            'message'=>'required|string|min:15',
+            'name'=> 'required|string|min:3|max:50',
+            'email'=>'required|string|email|min:5|max:50',
+            'message'=>'required|string|min:15|max:500',
         ];
     }
 
     public function messages()
     {
         return [
-            'name.min' => 'Imię wymaga min 5 znaków',
+            'name.min' => 'Imię wymaga min 3 znaki',
             'name.required' => 'Podaj Imię',
             'message.min' => 'opis wymaga min 15 znaków',
             'message.required' => 'Opis jest wymagany',
             'email.required' => 'Email jest wymagany',
-            'email.min' => 'email wymaga min 10 znaków',
+            'email.min' => 'email wymaga min 5 znaków',
         ];
     }
 }

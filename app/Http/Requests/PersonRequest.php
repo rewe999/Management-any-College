@@ -24,16 +24,16 @@ class PersonRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string|min:2',
-            'name' => 'required|string|min:2',
-            'surname' => 'required|string|min:2',
-            'section' => 'required|string|min:3',
+            'title' => 'required|string|min:2|max:10',
+            'name' => 'required|string|min:2|max:30',
+            'surname' => 'required|string|min:2|max:30',
+            'section' => 'required|string|min:3|max:50',
             'avatar' => "image:jpeg,png,jpg,svg|max:4096",
-            'position' => 'required|string|min:3',
-            'gender' => 'required|string|min:5',
+            'position' => 'required|string|min:3|max:50',
+            'gender' => 'required|string|min:5|max:30',
             'birth_date' => 'required|string',
-            'email' => 'required|string|min:5',
-            'url' => 'required|string|min:6'
+            'email' => 'required|email|min:5|max:50',
+            'url' => 'required|string|min:6|max:50'
         ];
     }
 }

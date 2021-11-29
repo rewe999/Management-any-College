@@ -24,8 +24,8 @@ class FormsRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=> 'required|string|min:4',
-            'description'=>'required|string|min:5',
+            'title'=> 'required|string|min:4|max:20',
+            'description'=>'required|string|min:5|max:1000',
         ];
     }
 
@@ -35,6 +35,7 @@ class FormsRequest extends FormRequest
             'title.min' => 'Zbyt krótki tytuł',
             'title.required' => 'Tytuł jest wymagany',
             'description.min' => 'Zbyt krótki opis',
+            'description.max' => 'Zbyt krótki długi',
             'description.required' => 'Opis jest wymagany',
         ];
     }

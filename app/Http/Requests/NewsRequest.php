@@ -24,8 +24,8 @@ class NewsRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=> 'required|string|min:4',
-            'content'=>'required|string|min:5',
+            'title'=> 'required|string|min:4|max:50',
+            'content'=>'required|string|min:5|max:10000',
         ];
     }
 
@@ -33,8 +33,10 @@ class NewsRequest extends FormRequest
     {
         return [
             'title.min' => 'Zbyt krótki tytuł',
+            'title.max' => 'Zbyt krótki długi',
             'title.required' => 'Tytuł jest wymagany',
             'description.min' => 'Zbyt krótki opis',
+            'description.max' => 'Zbyt krótki długi',
             'description.required' => 'Opis jest wymagany',
         ];
     }
