@@ -24,7 +24,7 @@ class PersonRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string|min:2|max:10',
+            'title' => 'required|string|min:2|max:50',
             'name' => 'required|string|min:2|max:30',
             'surname' => 'required|string|min:2|max:30',
             'section' => 'required|string|min:3|max:50',

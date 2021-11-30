@@ -24,7 +24,7 @@ class FormsRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=> 'required|string|min:4|max:20',
+            'title'=> 'required|string|min:4|max:120',
             'description'=>'required|string|min:5|max:1000',
         ];
     }
