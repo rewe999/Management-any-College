@@ -1,0 +1,59 @@
+id => 4929966 
+data => 2021-10-25 
+nr_ewidencyjny_pracownika => 500099 
+czas_startu => 2021-10-25 08:31:06 
+czas_konca => 2021-10-25 16:31:06 
+liczba_rekordow => 1 
+wydajnosc => 0 
+wydajnosc_alt => 0 
+employeeTaskId => 
+presenceId => 54976 ) 
+
+SELECT e.id "id pracownika" ,e.lastName as imie, e.lastName as nazwisko, o.shortName as "Jednoska organizacyjna", w.data as "Data pracy pracownika" , w.wydajnosc "Wydajność Pracownika", w.czas_startu as "CzasStart", w.czas_konca as "CzasKoniec"
+FROM `wydajnosc` w 
+LEFT JOIN tblemployees e on w.nr_ewidencyjny_pracownika = e.id 
+LEFT JOIN tblorganizationalunits o on o.id = e.organizationalUnitId
+WHERE o.shortName = "PK/M" and `data` BETWEEN "2021-10-26" AND "2021-11-25";
+
+idPracownika => 10115 
+imie => Lasocki 
+nazwisko => Lasocki 
+jednoskaOrganizacyjna => PK/M 
+DataPracyPracownika => 2021-06-04 
+WydajnośćPracownika => 0 
+
+------------------------------
+
+SELECT sum(floor(time_to_sec(timediff(`StopTime`, `StartTime`))/3600)) 
+FROM `tblpresences` 
+WHERE `EmployeeID` = 11124 and `ShiftDate` 
+between '2021-10-26' and '2021-11-15';
+
+EmployeeID => 86133
+imie => Stanisław
+nazwisko => Rusinowicz
+StartTime => 2021-10-26 05:17:00
+StopTime => 2021-10-26 14:18:00
+
+
+------------------
+zle nie działa
+SELECT e.id "idPracownika" ,e.firstName as imie, e.lastName as nazwisko, o.shortName as "JednoskaOrganizacyjna", w.data as "DataPracyPracownika" , w.wydajnosc "WydajnośćPracownika", w.czas_startu as "CzasStart", w.czas_konca as "CzasKoniec", p.StartTime "czas_startu_obecnosci_pracy", p.StopTime "czas_konca_obecnosci_pracy"
+            FROM `wydajnosc` w 
+            LEFT JOIN tblemployees e on w.nr_ewidencyjny_pracownika = e.id 
+            LEFT JOIN tblorganizationalunits o on o.id = e.organizationalUnitId
+            LEFT JOIN tblpresences p on p.EmployeeID = w.nr_ewidencyjny_pracownika
+            WHERE o.shortName = "PK/M" and `data` BETWEEN :startDate AND :stopDate;
+
+	    [nr_ewidencyjny_pracownika] => 500075
+            [lastName] => Arciniegas
+            [firstName] => Andreas
+            [srednia_wazona_miesiaczna] => 2193.754476904348
+            [czas_pracy] => 46
+            [12:28 16.11.2021] => 47.69
+
+
+
+
+
+
