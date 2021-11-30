@@ -47,7 +47,7 @@
     }
 
     .backgroundLayout{
-        background-image: url("https://i.pinimg.com/736x/15/4c/24/154c2433488f117811d5f4f3943361df.jpg");
+        background-image: url("{{asset('assets/background.jpg')}}");
         background-repeat: no-repeat;
         background-size: cover;
     }
