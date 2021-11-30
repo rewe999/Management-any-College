@@ -17,7 +17,7 @@
             </div>
             <div class="mb-3">
                 <label for="title" class="form-label">Url</label>
-                <input type="text" class="form-control" id="title" placeholder="url" name="url" value="{{$person->url}}">
+                <input type="text" class="form-control" id="url" placeholder="url" name="url" value="{{$person->url}}">
             </div>
             <div class="text-center pb-2">
                 <button type="submit" class="btn btn-primary text-center">EDYTUJ</button>

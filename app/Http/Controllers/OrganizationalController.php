@@ -53,8 +53,14 @@ class OrganizationalController extends Controller
 
     public function edit($id)
     {
-        $person = Organizational::with('people')->where('people_id',$id)->first();
-        return view('organizational.edit',compact('person'));
+        $organizational_exist = Organizational::where('people_id',$id)->get();
+
+        if(count($organizational_exist) > 0){
+            $person = Organizational::with('people')->where('people_id',$id)->first();
+            return view('organizational.edit',compact('person'));
+        }
+
+        return redirect()->route('peoples.index');
     }
 
     public function update(OrganizationalRequest $request, $id)

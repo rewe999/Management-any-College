@@ -51,8 +51,12 @@ class DidacticController extends Controller
 
     public function edit($id)
     {
-        $person = Didactic::with('people')->where('people_id',$id)->first();
-        return view('didactic.edit',compact('person'));
+        $didactic_exist = Didactic::where('people_id',$id)->get();
+        if(count($didactic_exist) > 0){
+            $person = Didactic::with('people')->where('people_id',$id)->first();
+            return view('didactic.edit',compact('person'));
+        }
+        return redirect()->route('peoples.index');
     }
 
     public function update(DidacticRequest $request, $id)

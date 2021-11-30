@@ -12,9 +12,9 @@ class ScientificController extends Controller
 {
     public function index($id)
     {
-        $didactic_exist = Scientific::where('people_id',$id)->get();
+        $scientific_exist = Scientific::where('people_id',$id)->get();
 
-        if(count($didactic_exist) > 0){
+        if(count($scientific_exist) > 0){
             return redirect()->route('scientific.edit',$id);
         }else {
             return redirect()->route('scientific.create',$id);
@@ -53,8 +53,14 @@ class ScientificController extends Controller
 
     public function edit($id)
     {
-        $person = Scientific::with('people')->where('people_id',$id)->first();
-        return view('scientific.edit',compact('person'));
+        $scientific_exist = Scientific::where('people_id',$id)->get();
+//        dd($scientific_exist);
+        if(count($scientific_exist) > 0){
+            $person = Scientific::with('people')->where('people_id',$id)->first();
+            return view('scientific.edit',compact('person'));
+        }
+
+        return redirect()->route('peoples.index');
     }
 
 
@@ -66,7 +72,7 @@ class ScientificController extends Controller
         $PersonData = $person->people->title . " " . $person->people->name . " " . $person->people->surname;
 
         session()->flash('message','Edytowano sekcje naukową ' . $PersonData);
-        return redirect()->route('people.edit');
+        return redirect()->route('peoples.index');
     }
 
     public function destroy($id)

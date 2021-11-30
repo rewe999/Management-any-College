@@ -4,22 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="change background image">
-      <change afterPath="$PROJECT_DIR$/cypress/integration/Persons/persons.index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/Persons/persons.show.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/persons/add.person.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/persons/delete.person.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/persons/edit.person.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/prints/add.print.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/prints/delete.print.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/prints/edit.print.js" afterDir="false" />
+    <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/didactic/add.didactic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/didactic/delete.didactic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/didactic/edit.didactic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/organizational/add.organizational.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/organizational/delete.organizational.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/organizational/edit.organizational.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/scientific/add.scientific.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/scientific/delete.scientific.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/scientific/edit.scientific.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/FormsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/FormsRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_11_161820_create_people_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_161820_create_people_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DidacticController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DidacticController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganizationalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganizationalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScientificController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScientificController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/Persons/persons.show.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/Persons/persons.show.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/didactic/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/didactic/edit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,18 +163,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cypress/integration/admin/persons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cypress/integration/admin/organizational" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programowanie\Laravel\PD-pwsz\cypress\integration\admin\organizational" />
+      <recent name="E:\Programowanie\Laravel\PD-pwsz\cypress\integration\admin\didactic" />
+      <recent name="E:\Programowanie\Laravel\PD-pwsz\cypress\integration\admin\scientific" />
       <recent name="E:\Programowanie\Laravel\PD-pwsz\cypress\integration\admin\persons" />
       <recent name="E:\Programowanie\Laravel\PD-pwsz\cypress\integration\admin" />
-      <recent name="E:\Programowanie\Laravel\PD-pwsz\cypress\integration\Persons" />
-      <recent name="E:\Programowanie\Laravel\PD-pwsz\database\factories" />
-      <recent name="E:\Programowanie\Laravel\PD-pwsz\database\seeds" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Programowanie\Laravel\PD-pwsz\cypress\integration\admin\prints" />
@@ -342,7 +342,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638273651565</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="write tests cypress">
+      <created>1638295311380</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1638295311380</updated>
+    </task>
+    <task id="LOCAL-00009" summary="write tests cypress">
+      <created>1638295332449</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1638295332449</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +382,8 @@
     <MESSAGE value="add seeder and factories" />
     <MESSAGE value="change login view , validate max variables in request" />
     <MESSAGE value="change background image" />
-    <option name="LAST_COMMIT_MESSAGE" value="change background image" />
+    <MESSAGE value="write tests cypress" />
+    <option name="LAST_COMMIT_MESSAGE" value="write tests cypress" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
