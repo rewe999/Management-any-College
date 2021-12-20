@@ -1,1 +1,20 @@
-{}
+{
+    "baseUrl": "http://127.0.0.1:8000/",
+    "testFiles": [
+        "admin/persons/add.person.js",
+        "admin/persons/edit.person.js",
+        "admin/didactic/add.didactic.js",
+        "admin/didactic/edit.didactic.js",
+        "admin/organizational/add.organizational.js",
+        "admin/organizational/edit.organizational.js",
+        "admin/scientific/add.scientific.js",
+        "admin/scientific/edit.scientific.js",
+        "admin/scientific/delete.scientific.js",
+        "admin/organizational/delete.organizational.js",
+        "admin/didactic/delete.didactic.js",
+        "admin/persons/delete.person.js",
+        "admin/prints/add.print.js",
+        "admin/prints/edit.print.js",
+        "admin/prints/delete.print.js"
+    ]
+}

@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/didactic/add.didactic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/didactic/delete.didactic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/didactic/edit.didactic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/organizational/add.organizational.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/organizational/delete.organizational.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/organizational/edit.organizational.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/scientific/add.scientific.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/scientific/delete.scientific.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/admin/scientific/edit.scientific.js" afterDir="false" />
+    <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="write tests cypress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DidacticController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DidacticController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganizationalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganizationalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScientificController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScientificController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/Persons/persons.show.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/Persons/persons.show.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/didactic/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/didactic/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/admin/didactic/edit.didactic.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/admin/didactic/edit.didactic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

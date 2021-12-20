@@ -10,7 +10,7 @@ describe('edit didactic', () => {
         cy.get('#accordionSidebar > li:nth-child(7) > a').click()
         cy.get('#collapsePeoples > div > a:nth-child(3)').click()
 
-        cy.get('#content > div > div > div > div > table > tbody > tr > td:nth-child(4) > button').click()
+        cy.get('#content > div > div > div > div > table > tbody > tr:nth-child(1) > td:nth-child(4) > button').click()
 
 
         const phrase = faker.hacker.phrase()
