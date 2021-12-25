@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="write tests cypress">
+    <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/peoples.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/admin/didactic/edit.didactic.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/admin/didactic/edit.didactic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/peoples/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,6 +280,7 @@
       <workItem from="1637853575021" duration="2906000" />
       <workItem from="1638017860646" duration="69000" />
       <workItem from="1638210965727" duration="2779000" />
+      <workItem from="1640430941317" duration="896000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -344,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638295332449</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cypress json">
+      <created>1640026669378</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1640026669378</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +379,8 @@
     <MESSAGE value="change login view , validate max variables in request" />
     <MESSAGE value="change background image" />
     <MESSAGE value="write tests cypress" />
-    <option name="LAST_COMMIT_MESSAGE" value="write tests cypress" />
+    <MESSAGE value="cypress json" />
+    <option name="LAST_COMMIT_MESSAGE" value="cypress json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
