@@ -19,7 +19,7 @@
                                     <img src="{{$people->image}}"
                                          class="img-fluid rounded avatarImage" alt="image">
                                 @else
-                                    <img src="https://smart-be.pl/wp-content/uploads/2016/07/no-avatar.jpg"
+                                    <img src="{{asset('assets/no-avatar.jpg')}}"
                                          class="img-fluid rounded mx-auto d-block avatarImage" alt="image ">
                                 @endif
                             </div>

@@ -48,11 +48,6 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 desc">
                                 <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
                                     <h1 class="mb-4">Dane o pracowniku:</h1>
-{{--                                    <p class="">Est diam venenatis arcu lacus ad. Duis quis eros. Cursus et rutrum eleifend--}}
-{{--                                        sollicitudin lacinia justo id turpis. Nec convallis integer. Odio eget duis.--}}
-{{--                                        Nulla aenean et. Blandit varius sollicitudin. Pellentesque leo primis neque urna--}}
-{{--                                        magnis. Elit ut sollicitudin. Et est a nam dolores eget itaque sagittis et--}}
-{{--                                        parturient duis est eleifend sociis rutrum odio viverra integer.</p>--}}
                                     <div class="about-profile">
                                         <ul class="admin-profile ">
                                             <li><h5><span class="pro-title"> Imię </span> <span class="pro-detail">{{$person->name}}</span></h5></li>
@@ -60,8 +55,6 @@
                                             <li><h5><span class="pro-title"> Email </span> <span class="pro-detail">{{$person->email}}</span></h5></li>
                                             <li><h5><span class="pro-title"> Sekcja </span> <span class="pro-detail">{{$person->section}}</span></h5></li>
                                             <li><h5><span class="pro-title"> Pozycja </span> <span class="pro-detail">{{$person->position}}</span></h5></li>
-{{--                                            <li><span class="pro-title"> Data urodzenia </span> <span class="pro-detail">{{$person->birth_date}}</span></li>--}}
-
                                         </ul>
                                     </div>
                                 </div>
