@@ -3,7 +3,7 @@
 @section('content')
     <div class="container content-size">
     <div class="title text-center textWord">{{$new->title}}</div>
-            <div class="text-wrap test">
+            <div class="text-wrap test textWord">
                <p class="pt-5 font-weight-bold">{!! $new->content !!}</p>
             </div>
     </div>
@@ -11,8 +11,8 @@
 
 <style>
     .textWord {
-        max-width: 100vw;
-        word-wrap: break-word;
+        max-width: 100vw !important;
+        word-wrap: break-word !important;
     }
     .title {
         min-height: 2rem;

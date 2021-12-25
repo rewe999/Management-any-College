@@ -12,7 +12,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::get();
+        $news = News::orderBy('date','DESC')->get();
         return view('news.index',['news' => $news]);
     }
 
@@ -23,7 +23,7 @@ class NewsController extends Controller
 
     public function showNews()
     {
-        $news = News::orderBy('date')->get();
+        $news = News::orderBy('date','DESC')->get();
         return view('news.showNews',['news' => $news]);
     }
 

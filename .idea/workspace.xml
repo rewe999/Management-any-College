@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/peoples/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/peoples/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +147,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
@@ -279,7 +281,7 @@
       <workItem from="1637853575021" duration="2906000" />
       <workItem from="1638017860646" duration="69000" />
       <workItem from="1638210965727" duration="2779000" />
-      <workItem from="1640430941317" duration="3084000" />
+      <workItem from="1640430941317" duration="3871000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -351,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640026669378</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="clean css and comments">
+      <created>1640434304805</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1640434304805</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +388,8 @@
     <MESSAGE value="change background image" />
     <MESSAGE value="write tests cypress" />
     <MESSAGE value="cypress json" />
-    <option name="LAST_COMMIT_MESSAGE" value="cypress json" />
+    <MESSAGE value="clean css and comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean css and comments" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
