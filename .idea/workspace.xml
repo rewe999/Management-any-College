@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915afc12-ece3-46e7-a543-b74a72ba57b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +280,8 @@
       <workItem from="1637853575021" duration="2906000" />
       <workItem from="1638017860646" duration="69000" />
       <workItem from="1638210965727" duration="2779000" />
-      <workItem from="1640430941317" duration="3871000" />
+      <workItem from="1640430941317" duration="4157000" />
+      <workItem from="1640532725622" duration="795000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -360,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640434304805</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix news word break">
+      <created>1640435047113</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1640435047113</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +396,8 @@
     <MESSAGE value="write tests cypress" />
     <MESSAGE value="cypress json" />
     <MESSAGE value="clean css and comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean css and comments" />
+    <MESSAGE value="fix news word break" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix news word break" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
