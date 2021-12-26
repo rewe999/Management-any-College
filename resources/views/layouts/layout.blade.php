@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -28,7 +28,7 @@
 <body>
 @include('layouts.navbar')
 @include('sweetalert::alert')
-<div class="backgroundLayout {{\Illuminate\Support\Facades\Request::is('pracownicy') ? '' : 'pb-5 pt-5'}}" >
+<div class="{{\Illuminate\Support\Facades\Request::is('pracownicy') ? '' : 'pb-5 pt-5 backgroundLayout'}}" >
     @yield('content')
 </div>
 @include('layouts.footer')
