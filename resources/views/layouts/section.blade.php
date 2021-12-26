@@ -40,7 +40,7 @@
                                                 alt="card image"></p>
                                     @else
                                         <p><img class="img-fluid"
-                                                src="https://picsum.photos/200/300?random={{$person[0]->people->id}}"
+                                                src="{{asset('assets/no-avatar.jpg')}}"
                                                 alt="card image"></p>
                                     @endif
                                 </div>
