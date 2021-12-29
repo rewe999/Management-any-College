@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d21350d-9f15-47cc-ba64-b6d8f13389df" name="Default Changelist" comment="" />
+    <list default="true" id="0d21350d-9f15-47cc-ba64-b6d8f13389df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/admin/persons/add.person.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/admin/persons/add.person.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/prints/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prints/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,7 +287,8 @@
       <workItem from="1640430941317" duration="4157000" />
       <workItem from="1640532725622" duration="5236000" />
       <workItem from="1640708522919" duration="59000" />
-      <workItem from="1640714093879" duration="348000" />
+      <workItem from="1640714093879" duration="1414000" />
+      <workItem from="1640801145567" duration="1616000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -367,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640435047113</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add composer">
+      <created>1640714523133</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1640714523133</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +411,8 @@
     <MESSAGE value="cypress json" />
     <MESSAGE value="clean css and comments" />
     <MESSAGE value="fix news word break" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix news word break" />
+    <MESSAGE value="add composer" />
+    <option name="LAST_COMMIT_MESSAGE" value="add composer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

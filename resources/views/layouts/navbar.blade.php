@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navbar_top">
     <div class="container-fluid">
         <a class="navbar-brand" href="/"><img src="{{asset('assets/pwsz-logo.jpg')}}" class="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,3 +55,21 @@
     }
 
 </style>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.getElementById('navbar_top').classList.add('fixed-top');
+                // add padding top to show content behind navbar
+                navbar_height = document.querySelector('.navbar').offsetHeight;
+                document.body.style.paddingTop = navbar_height + 'px';
+            } else {
+                document.getElementById('navbar_top').classList.remove('fixed-top');
+                // remove padding top from body
+                document.body.style.paddingTop = '0';
+            }
+        });
+    });
+</script>

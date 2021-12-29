@@ -10,11 +10,11 @@
                 <tbody>
                     @foreach($forms as $form)
                         <tr>
-                            <td><b>{{$form->title}}</b></td>
+                            <td><h4><b>{{$form->title}}</b></h4></td>
                             <td>
                                 <ul>
                                     @foreach($form->attachments as $fo)
-                                        <li><a href="{{asset('files')}}/{{$fo->file}}" class="d-inline">{{$fo->file}}</a></li>
+                                        <li><h6><a href="{{asset('files')}}/{{$fo->file}}" class="d-inline">{{$fo->file}}</a></h6></li>
                                     @endforeach
                                 </ul>
                             </td>

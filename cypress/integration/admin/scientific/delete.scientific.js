@@ -1,7 +1,7 @@
 import faker from 'faker';
 
-describe('add new scientific', () => {
-    it('testing add new scientific', () => {
+describe('delete scientific', () => {
+    it('testing delete scientific', () => {
         cy.visit('http://127.0.0.1:8000/admin/login')
         cy.get('#email').type('admin@admin.pl')
         cy.get('#password').type('admin@admin.pl')
