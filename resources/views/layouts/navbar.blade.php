@@ -45,7 +45,7 @@
 
 <style>
     .logo {
-        width: 5rem;
+        width: 15rem;
         height: 5rem;
     }
 
