@@ -26,10 +26,9 @@ class ContactController extends Controller
         ];
 
         try {
-            $peoples = People::all();
             Mail::to($email)->send(new ContactEmail($details));
             Mail::to($request['person'])->send(new toAdminEmail($details));
-            return redirect()->route('contact.index')->with('peoples',$peoples);
+            return redirect()->route('contact');
         }catch (\Exception $e) {
             return view('contact.index')->with('message',"Problem podczas wysyłania emaila");
         }

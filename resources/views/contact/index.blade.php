@@ -25,17 +25,17 @@
                 <p class="justify text-muted">Masz pytanie lub chciałbyś przekazać nam swoją opinię? Wypełnij poniższy formularz, aby skontaktować się z naszym administratorem.</p>
 
                 <form method="POST" action="{{route('contact.send')}}" enctype="multipart/form-data">
-                    <div class="form-group pt-2 pl-1"> <label for="exampleInputName">Twoje imię</label> <input type="text" class="form-control" id="exampleInputName" name="name"> </div>
-                    <div class="form-group pl-1"> <label for="exampleInputEmail1">Twój adres email</label> <input type="email" class="form-control" id="exampleInputEmail1" name="email"> </div>
+                    <div class="form-group pt-2 pl-1"> <label for="exampleInputName">Twoje imię</label> <input type="text" class="form-control" id="exampleInputName" name="name" value="{{old('name')}}"> </div>
+                    <div class="form-group pl-1"> <label for="exampleInputEmail1">Twój adres email</label> <input type="email" class="form-control" id="exampleInputEmail1" name="email" value="{{old('email')}}"></div>
                     <div class="form-group pl-1"> <label for="exampleInputEmail1">Odbiorca </label>
-                        <input class="form-control" list="person" id="personEmail" name="person" />
+                        <input class="form-control" list="person" id="personEmail" name="person" value="{{old('person')}}"/>
                         <datalist id="person">
                             @foreach($peoples as $people)
                                 <option value="{{$people->email}}"> {{$people->name}} {{$people->surname}}
                             @endforeach
                         </datalist>
                     </div>
-                    <div class="form-group pl-1"> <label for="exampleFormControlTextarea1">Twoja wiadomość</label> <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="message"></textarea> </div>
+                    <div class="form-group pl-1"> <label for="exampleFormControlTextarea1">Twoja wiadomość</label> <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="message">{{old('message')}}</textarea> </div>
                     <div class="row">
                         <div class="col-md-3 offset-md-9"><button type="submit" class="btn btn-primary sendButton">Wyślij</button></div>
                     </div>
