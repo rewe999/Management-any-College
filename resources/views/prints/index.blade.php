@@ -14,7 +14,7 @@
                             <td>
                                 <ul>
                                     @foreach($form->attachments as $fo)
-                                        <li><h6><a href="{{asset('files')}}/{{$fo->file}}" class="d-inline">{{$fo->file}}</a></h6></li>
+                                        <li><h6><a href="{{asset('files')}}/{{$fo->file}}" class="d-inline wrap-link">{{$fo->file}}</a></h6></li>
                                     @endforeach
                                 </ul>
                             </td>
@@ -25,3 +25,17 @@
         </div>
     </div>
 @endsection
+
+<style>
+    .wrap-link {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+    }
+
+    li {
+        list-style: none;
+    }
+</style>
