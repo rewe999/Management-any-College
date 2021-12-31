@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Models\People;
 use App\Http\Requests\ContactRequest;
 use App\Mail\ContactEmail;
 use App\Mail\toAdminEmail;
@@ -11,7 +12,8 @@ use Illuminate\Support\Facades\Mail;
 class ContactController extends Controller
 {
     public function index(){
-        return view('contact.index');
+        $peoples = People::all();
+        return view('contact.index')->with('peoples',$peoples);
     }
 
     public function send(ContactRequest $request){
@@ -24,9 +26,10 @@ class ContactController extends Controller
         ];
 
         try {
+            $peoples = People::all();
             Mail::to($email)->send(new ContactEmail($details));
-            Mail::to(env('MAIL_USERNAME'))->send(new toAdminEmail($details));
-            return view('contact.index');
+            Mail::to($request['person'])->send(new toAdminEmail($details));
+            return redirect()->route('contact.index')->with('peoples',$peoples);
         }catch (\Exception $e) {
             return view('contact.index')->with('message',"Problem podczas wysyłania emaila");
         }
