@@ -38,7 +38,7 @@
     display: block;
     position: absolute;
     bottom: 0;
-    left: -400px;
+    left: -600px;
     transition: 0.4s;
     padding: 15px 0;
     background: rgba(0, 0, 0, 0.4);
