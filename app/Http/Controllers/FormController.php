@@ -12,7 +12,7 @@ class FormController extends Controller
 {
     public function index()
     {
-        $forms = Form::with('attachments')->get();
+        $forms = Form::with('attachments')->orderBy('id','desc')->get();
         $attachments = FormAttachments::all();
         return view('prints.index',['forms'=>$forms,'attachments' => $attachments]);
     }
@@ -49,7 +49,7 @@ class FormController extends Controller
 
     public function showPrints()
     {
-        return view('prints.showPrints', ['prints' => Form::all()]);
+        return view('prints.showPrints', ['prints' => Form::orderBy('id','desc')->get()]);
     }
 
     public function show($id)
