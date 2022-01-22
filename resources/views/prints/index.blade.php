@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <h1 class="text-center mx-auto pb-5">DRUKI</h1>
+            <h1 class="text-center mx-auto pb-5">DRUKI ZAKŁADU INFORMATYKI</h1>
             <table class="table">
                 <thead>
                 </thead>

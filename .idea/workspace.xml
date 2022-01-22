@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0d21350d-9f15-47cc-ba64-b6d8f13389df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/NewsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/NewsRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ScientificRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ScientificRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_11_161820_create_people_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_161820_create_people_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_11_164433_create_didactics_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_164433_create_didactics_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_21_112940_create_scientifics_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_21_112940_create_scientifics_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_21_113055_create_organizationals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_21_113055_create_organizationals_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,6 +289,7 @@
       <workItem from="1640968098558" duration="449000" />
       <workItem from="1642618839410" duration="2944000" />
       <workItem from="1642679845980" duration="680000" />
+      <workItem from="1642870850998" duration="611000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -394,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642188178149</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="change organization database">
+      <created>1642870880887</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1642870880887</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +428,8 @@
     <MESSAGE value="fix news word break" />
     <MESSAGE value="add composer" />
     <MESSAGE value="order by print desc" />
-    <option name="LAST_COMMIT_MESSAGE" value="order by print desc" />
+    <MESSAGE value="change organization database" />
+    <option name="LAST_COMMIT_MESSAGE" value="change organization database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

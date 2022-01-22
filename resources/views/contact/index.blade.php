@@ -21,8 +21,8 @@
         <div class="row my-2 mx-2">
             <div class="col-sm-6"> <img class="contactImage" src="{{asset('assets/contact.jpg')}}" alt="IMG"> </div>
             <div class="col-sm-6">
-                <h2 class="form-title">Skontaktuj się z nami</h2>
-                <p class="justify text-muted">Masz pytanie lub chciałbyś przekazać nam swoją opinię? Wypełnij poniższy formularz, aby skontaktować się z naszym administratorem.</p>
+                <h2 class="form-title">Skontaktuj się z naszymi pracownikami</h2>
+                <p class="justify text-muted">Masz pytanie lub chciałbyś przekazać nam swoją opinię? Wypełnij poniższy formularz, aby skontaktować się z naszymi pracownikami.</p>
 
                 <form method="POST" action="{{route('contact.send')}}" enctype="multipart/form-data">
                     <div class="form-group pt-2 pl-1"> <label for="exampleInputName">Twoje imię</label> <input type="text" class="form-control" id="exampleInputName" name="name" value="{{old('name')}}"> </div>

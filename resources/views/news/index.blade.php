@@ -3,7 +3,7 @@
 @section('content')
     <div class="container content-size">
 
-        <h1 class="text-center mx-auto">AKTUALNOŚCI</h1>
+        <h1 class="text-center mx-auto">AKTUALNOŚCI ZAKŁADU INFORMATYKI</h1>
 
             @foreach($news as $new)
                 <div class="alert alert-primary" role="alert">
