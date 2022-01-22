@@ -28,93 +28,31 @@
         </section>
 
         <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
-
+            <div class="col-12 mb-4 mb-md-0">
                 <ul class="list-unstyled mb-0">
                     <li>
-                        <a href="#!" class="text-white">Link 1</a>
+                        <a href="https://bip.collegiumwitelona.pl/" target="_blank" class="text-white">Biuletyn informacji publicznej</a>
                     </li>
                     <li>
-                        <a href="#!" class="text-white">Link 2</a>
+                        <a href="http://www.plan.pwsz.legnica.edu.pl/" target="_blank" class="text-white">Harmonogramy zajęć</a>
                     </li>
                     <li>
-                        <a href="#!" class="text-white">Link 3</a>
+                        <a href="http://www.wzi.pwsz.legnica.edu.pl/artykul-121-dz" target="_blank" class="text-white">Dziekanat</a>
                     </li>
                     <li>
-                        <a href="#!" class="text-white">Link 4</a>
+                        <a href="https://portal.pwsz.legnica.edu.pl/auth/login" target="_blank" class="text-white">Omnis</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
-
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <a href="#!" class="text-white">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 4</a>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
-
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <a href="#!" class="text-white">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 4</a>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
-
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <a href="#!" class="text-white">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 4</a>
-                    </li>
-                </ul>
-            </div>
         </div>
         <!-- Grid container -->
 
         <!-- Copyright -->
         <div class="mt-4">
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © {{ date("Y") }} Copyright:
-            <a class="text-white" href="http://www.pwsz.legnica.edu.pl/" target="_blank">PWSZ Legnica</a>
-        </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © {{ date("Y") }} Copyright:
+                <a class="text-white" href="http://www.pwsz.legnica.edu.pl/" target="_blank">PWSZ Legnica</a>
+            </div>
         </div>
 </footer>
