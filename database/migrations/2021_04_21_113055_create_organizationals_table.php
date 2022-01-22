@@ -15,7 +15,7 @@ class CreateOrganizationalsTable extends Migration
     {
         Schema::create('organizationals', function (Blueprint $table) {
             $table->id();
-            $table->string('data',500);
+            $table->longText('data');
             $table->unsignedBigInteger("people_id");
             $table->foreign("people_id")->references("id")->on("people")
                 ->onDelete("cascade");

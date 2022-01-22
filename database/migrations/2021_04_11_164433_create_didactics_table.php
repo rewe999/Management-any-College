@@ -15,7 +15,7 @@ class CreateDidacticsTable extends Migration
     {
         Schema::create('didactics', function (Blueprint $table) {
             $table->id();
-            $table->string('data',500);
+            $table->longText('data');
             $table->string('url',150);
             $table->unsignedBigInteger("people_id");
             $table->foreign("people_id")->references("id")->on("people")

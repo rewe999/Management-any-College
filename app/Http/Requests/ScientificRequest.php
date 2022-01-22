@@ -24,7 +24,7 @@ class ScientificRequest extends FormRequest
     public function rules()
     {
         return [
-            'data'=> 'required|string|min:4|max:500',
+            'data'=> 'required|string|min:4',
         ];
     }
 

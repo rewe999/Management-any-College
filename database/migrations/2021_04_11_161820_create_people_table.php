@@ -25,7 +25,7 @@ class CreatePeopleTable extends Migration
             $table->string('avatar')->nullable();
             $table->boolean('active')->default(true);
             $table->string('email',50);
-            $table->string('url',150);
+            $table->string('url',150)->nullable();
             $table->timestamps();
         });
     }
