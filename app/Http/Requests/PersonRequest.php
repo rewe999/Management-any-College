@@ -33,7 +33,7 @@ class PersonRequest extends FormRequest
             'gender' => 'required|string|min:5|max:30',
             'birth_date' => 'required|string',
             'email' => 'required|email|min:5|max:150',
-            'url' => 'required|string|min:6|max:50'
+            'url' => 'max:50'
         ];
     }
 }

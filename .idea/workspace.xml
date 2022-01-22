@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0d21350d-9f15-47cc-ba64-b6d8f13389df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/DidacticRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/DidacticRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_11_164433_create_didactics_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_164433_create_didactics_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/didactic/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/didactic/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +292,7 @@
       <workItem from="1640968098558" duration="449000" />
       <workItem from="1642618839410" duration="2944000" />
       <workItem from="1642679845980" duration="680000" />
-      <workItem from="1642870850998" duration="611000" />
+      <workItem from="1642870850998" duration="1641000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -396,7 +399,28 @@
       <option name="project" value="LOCAL" />
       <updated>1642870880887</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="change footer">
+      <created>1642871513069</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1642871513069</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add info about college">
+      <created>1642871744095</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1642871744095</updated>
+    </task>
+    <task id="LOCAL-00018" summary="navbar sm center">
+      <created>1642872062856</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1642872062856</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +453,10 @@
     <MESSAGE value="add composer" />
     <MESSAGE value="order by print desc" />
     <MESSAGE value="change organization database" />
-    <option name="LAST_COMMIT_MESSAGE" value="change organization database" />
+    <MESSAGE value="change footer" />
+    <MESSAGE value="add info about college" />
+    <MESSAGE value="navbar sm center" />
+    <option name="LAST_COMMIT_MESSAGE" value="navbar sm center" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
