@@ -1,21 +1,21 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navbar_top">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark" id="navbar_top">
     <div class="container-fluid">
         <a class="navbar-brand" href="/"><img src="{{asset('assets/pwsz-logo.jpg')}}" class="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-end text-wrap" id="navbarNavDropdown">
             <ul class="navbar-nav">
 
-                <li class="nav-item dropdown"> <a class="nav-link" href="{{route('peoples.index')}}"> PRACOWNICY UCZELNI</a> </li>
-                <li class="nav-item dropdown"> <a class="nav-link" href="{{route('print')}}"> DRUKI </a> </li>
-                <li class="nav-item dropdown"> <a class="nav-link" href="{{route('contact')}}"> KONTAKT </a> </li>
-                <li class="nav-item dropdown"> <a class="nav-link" href="{{route('news')}}">AKTUALNOŚCI</a> </li>
+                <li class="nav-item dropdown text-center"> <a class="nav-link" href="{{route('peoples.index')}}"> PRACOWNICY UCZELNI</a> </li>
+                <li class="nav-item dropdown text-center"> <a class="nav-link" href="{{route('print')}}"> DRUKI </a> </li>
+                <li class="nav-item dropdown text-center"> <a class="nav-link" href="{{route('contact')}}"> KONTAKT </a> </li>
+                <li class="nav-item dropdown text-center"> <a class="nav-link" href="{{route('news')}}">AKTUALNOŚCI</a> </li>
 
                 @auth
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdownMenuLink" class="nav-link dropdown-toggle" href="#" role="button" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a id="navbarDropdownMenuLink" class="nav-link dropdown-toggle text-center" href="#" role="button" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name }}
                         </a>
 
