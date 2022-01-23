@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','osoba')
+@section('title',$person->people->name." ".$person->people->surname)
 @section('content')
     <div class="container">
         <h1 class="text-center">Edytuj sekcje naukową <b>{{$person->people->title}} {{$person->people->name}} {{$person->people->surname}}</b></h1>

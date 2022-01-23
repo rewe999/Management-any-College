@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','Edytuj aktualności')
+@section('title','Pokaż aktualności')
 @section('content')
     @if(session('message'))
         <div class="alert alert-success">

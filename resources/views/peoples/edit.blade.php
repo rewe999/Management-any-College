@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','osoba')
+@section('title',$person->name." ".$person->surname)
 @section('content')
     @if(session('message'))
         <div class="alert alert-success">

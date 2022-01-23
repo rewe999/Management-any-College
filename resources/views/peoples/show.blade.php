@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title','osoba')
+@section('title',$person->name." ".$person->surname)
 @section('content')
     <div class="container">
         <div class="card text-center">

@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title','osoba')
+@section('title',$person->name." ".$person->surname)
 @section('content')
     <div class="container">
         <h1 class="text-center pt-5">Utwórz sekcję dydaktyczną <b>{{$person->title}} {{$person->name}} {{$person->surname}}</b></h1>
