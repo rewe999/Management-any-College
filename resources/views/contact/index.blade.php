@@ -7,6 +7,12 @@
                 {{ session('message') }}
             </div>
         @endif
+
+        @if(session('errorMessage'))
+            <div class="alert alert-danger">
+                {{ session('errorMessage') }}
+            </div>
+        @endif
     </div>
 
     @if($errors->first())
