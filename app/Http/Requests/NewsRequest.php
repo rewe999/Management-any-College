@@ -25,7 +25,7 @@ class NewsRequest extends FormRequest
     {
         return [
             'title'=> 'required|string|min:4|max:500',
-            'content'=>'required|string|min:5|max:10000',
+            'content'=>'required|string|min:11|max:10000',
         ];
     }
 
@@ -35,9 +35,9 @@ class NewsRequest extends FormRequest
             'title.min' => 'Zbyt krótki tytuł',
             'title.max' => 'Zbyt długi tytuł',
             'title.required' => 'Tytuł jest wymagany',
-            'description.min' => 'Zbyt krótki opis',
-            'description.max' => 'Zbyt krótki długi',
-            'description.required' => 'Opis jest wymagany',
+            'content.min' => 'Zbyt krótki opis',
+            'content.max' => 'Zbyt krótki długi',
+            'content.required' => 'Opis jest wymagany',
         ];
     }
 }

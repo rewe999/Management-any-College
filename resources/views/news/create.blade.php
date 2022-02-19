@@ -15,7 +15,7 @@
 
             <div class="mb-3">
                 <label for="content" class="form-label">Opis</label>
-                <textarea class="form-control" id="editor" rows="3" name="content" value="{{old('description')}}"></textarea>
+                <textarea class="form-control" id="editor" rows="3" name="content" value="{{old('content')}}"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary text-center">Dodaj</button>
