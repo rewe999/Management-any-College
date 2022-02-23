@@ -45,7 +45,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy;<a href="mailto:mail@gmail.com">webmaster</a> {{ date('Y') }}</span>
+                    <span>Copyright &copy;<a href="mailto:zymek998@gmail.com">webmaster</a> {{ date('Y') }}</span>
                 </div>
             </div>
         </footer>
