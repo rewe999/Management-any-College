@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0d21350d-9f15-47cc-ba64-b6d8f13389df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/email/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/email/email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/email/toAdminEmail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/email/toAdminEmail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Models/People.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/People.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_11_161820_create_people_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_161820_create_people_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/peoples/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/peoples/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,6 +295,11 @@
       <workItem from="1642870850998" duration="2381000" />
       <workItem from="1642938500314" duration="1953000" />
       <workItem from="1645277245724" duration="7630000" />
+      <workItem from="1645631823288" duration="742000" />
+      <workItem from="1645633400623" duration="997000" />
+      <workItem from="1646153966746" duration="1874000" />
+      <workItem from="1646244353503" duration="784000" />
+      <workItem from="1646320191308" duration="817000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -448,7 +455,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645283307783</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="change email template">
+      <created>1645632106136</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1645632106136</updated>
+    </task>
+    <task id="LOCAL-00024" summary="PersonRequest.php">
+      <created>1645632442088</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1645632442088</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +509,9 @@
     <MESSAGE value="change titles" />
     <MESSAGE value="fix request news" />
     <MESSAGE value="contact form validate person" />
-    <option name="LAST_COMMIT_MESSAGE" value="contact form validate person" />
+    <MESSAGE value="change email template" />
+    <MESSAGE value="PersonRequest.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="PersonRequest.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

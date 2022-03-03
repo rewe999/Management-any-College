@@ -13,7 +13,7 @@
             <div class="row">
                 @foreach($peoples as $people)
                     <div class="col-lg-3 col-md-6 m-auto">
-                        <div class="member">
+                        <div class="member @if($people->is_manager) manager-frame @endif">
                             <div class="member-img">
                                 @if($people->avatar)
                                     <img src="{{$people->image}}"
@@ -53,5 +53,9 @@
         background-image: url("{{asset('assets/pwsz-img.jpg')}}");
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .manager-frame {
+        border: 5px solid #FFD700;
     }
 </style>

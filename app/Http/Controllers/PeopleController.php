@@ -12,7 +12,7 @@ class PeopleController extends Controller
 {
     public function index()
     {
-        $peoples = People::orderBy('name')->with('didactic')->paginate(10);
+        $peoples = People::orderBy('is_manager','desc')->orderBy('name')->with('didactic')->paginate(10);
         return view('peoples.index', ['peoples' => $peoples]);
     }
 
@@ -34,7 +34,8 @@ class PeopleController extends Controller
         }
         $person->save();
 
-        return redirect()->route('people.edit')->with('message',"Pracownik {$person->name} {$person->surname} został dodany");
+        return redirect()->route('people.edit')
+            ->with('message',"Pracownik {$person->name} {$person->surname} został dodany");
     }
 
     public function show(int $id)
@@ -69,7 +70,8 @@ class PeopleController extends Controller
         }
         $person->save();
 
-        return redirect()->back()->with('message',"Pracownik {$person->name} został edytowany");
+        return redirect()->back()
+            ->with('message',"Pracownik {$person->name} został edytowany");
     }
 
     public function destroy($id)
