@@ -26,7 +26,7 @@ class CreatePeopleTable extends Migration
             $table->boolean('active')->default(true);
             $table->string('email',50);
             $table->string('url',150)->nullable();
-            $table->tinyInteger('is_manager')->nullable();
+            $table->tinyInteger('is_manager')->default(0)->nullable();
             $table->timestamps();
         });
     }
