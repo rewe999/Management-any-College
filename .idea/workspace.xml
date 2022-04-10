@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0d21350d-9f15-47cc-ba64-b6d8f13389df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PeopleController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +295,9 @@
       <workItem from="1645633400623" duration="997000" />
       <workItem from="1646153966746" duration="1874000" />
       <workItem from="1646244353503" duration="784000" />
-      <workItem from="1646320191308" duration="1932000" />
+      <workItem from="1646320191308" duration="2250000" />
+      <workItem from="1646764951514" duration="892000" />
+      <workItem from="1647083570414" duration="696000" />
     </task>
     <task id="LOCAL-00001" summary="fix admin panel and contact form">
       <created>1637251834893</created>
@@ -473,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646321505488</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="people orderByRaw title">
+      <created>1646322385543</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1646322385543</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +524,8 @@
     <MESSAGE value="change email template" />
     <MESSAGE value="PersonRequest.php" />
     <MESSAGE value="people manager change" />
-    <option name="LAST_COMMIT_MESSAGE" value="people manager change" />
+    <MESSAGE value="people orderByRaw title" />
+    <option name="LAST_COMMIT_MESSAGE" value="people orderByRaw title" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

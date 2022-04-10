@@ -12,13 +12,13 @@ class PeopleController extends Controller
 {
     public function index()
     {
-        $peoples = People::orderBy('is_manager','desc')->orderByRaw('CASE
-            WHEN title LIKE  "prof%" THEN 1
-            WHEN title LIKE "dr%" THEN 2
-            WHEN title LIKE  "mg%" THEN 3
-            WHEN title LIKE "in%" THEN 4
+        $peoples = People::orderBy('is_manager','desc')->orderByRaw("CASE
+            WHEN title LIKE  'prof%' THEN 1
+            WHEN title LIKE 'dr%' THEN 2
+            WHEN title LIKE  'mg%' THEN 3
+            WHEN title LIKE 'in%' THEN 4
             ELSE 5
-        END')->orderBy('name')->with('didactic')->paginate(10);
+        END")->orderBy('name')->with('didactic')->paginate(10);
         return view('peoples.index', ['peoples' => $peoples]);
     }
 
