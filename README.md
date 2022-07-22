@@ -29,15 +29,6 @@ composer install
 ```shell script
  php artisan migrate
 ```
-### 5. Now you can access the app here:
-Insert data from API to database:
-(method POST)
-http://127.0.0.1:8000/api/firms
-
-Get data from database:
-(method GET)
-http://127.0.0.1:8000/api/firms
-
 
 ## Author:
 - [Patryk Zym](https://github.com/rewe999/)
